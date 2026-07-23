@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Learning Resources | Source of Information</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Learning Resources | Source of Information
+    </title>
 
     <style>
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -20,6 +27,8 @@
             line-height: 1.6;
         }
 
+        /* HEADER */
+
         header {
             background-color: #0b3d62;
             color: white;
@@ -28,17 +37,19 @@
         }
 
         header h1 {
-            font-size: 32px;
+            font-size: 36px;
+            margin-bottom: 10px;
         }
 
-        header p {
-            margin-top: 8px;
-        }
+        /* NAVIGATION */
 
         nav {
             background-color: #062b45;
-            padding: 12px;
+            padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -46,78 +57,129 @@
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
+            display: inline-block;
         }
 
         nav a:hover {
             color: #ffd700;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+        /* INTRO */
 
         .intro {
             background-color: white;
-            padding: 30px;
             text-align: center;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 50px 20px;
         }
 
         .intro h2 {
             color: #0b3d62;
             margin-bottom: 15px;
+            font-size: 30px;
         }
 
+        .intro p {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* RESOURCE SECTION */
+
         .resources {
+            padding: 50px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .resources h2 {
+            text-align: center;
+            color: #0b3d62;
+            margin-bottom: 30px;
+        }
+
+        .resource-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
         }
+
+        /* RESOURCE CARD */
 
         .resource-card {
             background-color: white;
             width: 300px;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
         }
 
         .resource-card h3 {
             color: #0b3d62;
-            margin-bottom: 10px;
-        }
-
-        .resource-card p {
+            font-size: 24px;
             margin-bottom: 15px;
         }
 
-        .resource-card a {
+        .resource-card p {
+            margin-bottom: 20px;
+        }
+
+        /* BUTTONS */
+
+        .button {
             display: inline-block;
-            padding: 10px 18px;
+            padding: 11px 20px;
             background-color: #0b3d62;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: bold;
         }
 
-        .resource-card a:hover {
+        .button:hover {
             background-color: #062b45;
         }
+
+        /* STUDY GUIDE */
+
+        .study-guide {
+            background-color: #eaf2f7;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .study-guide h2 {
+            color: #0b3d62;
+            margin-bottom: 20px;
+        }
+
+        .study-guide p {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* FOOTER */
 
         footer {
             background-color: #062b45;
             color: white;
             text-align: center;
-            padding: 25px;
-            margin-top: 30px;
+            padding: 30px 20px;
         }
 
-        @media (max-width: 600px) {
+        footer p {
+            margin: 5px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
 
             nav a {
                 display: block;
@@ -127,138 +189,307 @@
             .resource-card {
                 width: 90%;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
-    <h1>Learning Resources</h1>
-    <p>Knowledge • Learning • Revision • Success</p>
+
+    <h1>
+        SOI Learning Resources
+    </h1>
+
+    <p>
+        Learn • Practice • Revise • Succeed
+    </p>
+
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="biology.html">Biology</a>
-    <a href="chemistry.html">Chemistry</a>
-    <a href="mathematics.html">Mathematics</a>
-    <a href="physics.html">Physics</a>
-    <a href="resources.html">Resources</a>
-    <a href="committee.html">Committee</a>
-    <a href="contact.html">Contact</a>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+    <a href="biology.html">
+        Biology
+    </a>
+
+    <a href="chemistry.html">
+        Chemistry
+    </a>
+
+    <a href="mathematics.html">
+        Mathematics
+    </a>
+
+    <a href="physics.html">
+        Physics
+    </a>
+
+    <a href="resources.html">
+        Resources
+    </a>
+
+    <a href="committee.html">
+        Committee
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
 </nav>
 
-<div class="container">
 
-    <div class="intro">
+<!-- INTRODUCTION -->
 
-        <h2>Welcome to the SOI Learning Resources Centre</h2>
+<section class="intro">
 
-        <p>
-            Access educational materials designed to support
-            students in their learning, revision, research,
-            and preparation for examinations.
-        </p>
+    <h2>
+        Welcome to the SOI Resource Centre
+    </h2>
+
+    <p>
+
+        This section provides students with organized
+        learning resources to help them understand
+        academic concepts, revise effectively,
+        practice questions, and prepare for examinations.
+
+    </p>
+
+</section>
+
+
+<!-- RESOURCES -->
+
+<section class="resources">
+
+    <h2>
+        Choose Your Subject
+    </h2>
+
+
+    <div class="resource-grid">
+
+
+        <!-- BIOLOGY -->
+
+        <div class="resource-card">
+
+            <h3>
+                🧬 Biology
+            </h3>
+
+            <p>
+
+                Explore Biology topics including cells,
+                human biology, ecology, genetics,
+                and plant biology.
+
+            </p>
+
+            <a href="biology.html"
+               class="button">
+
+                Open Biology
+
+            </a>
+
+        </div>
+
+
+        <!-- CHEMISTRY -->
+
+        <div class="resource-card">
+
+            <h3>
+                🧪 Chemistry
+            </h3>
+
+            <p>
+
+                Study atoms, elements, compounds,
+                chemical reactions, acids, bases,
+                and organic chemistry.
+
+            </p>
+
+            <a href="chemistry.html"
+               class="button">
+
+                Open Chemistry
+
+            </a>
+
+        </div>
+
+
+        <!-- MATHEMATICS -->
+
+        <div class="resource-card">
+
+            <h3>
+                ➗ Mathematics
+            </h3>
+
+            <p>
+
+                Develop your mathematical skills
+                through algebra, geometry, statistics,
+                trigonometry, and problem-solving.
+
+            </p>
+
+            <a href="mathematics.html"
+               class="button">
+
+                Open Mathematics
+
+            </a>
+
+        </div>
+
+
+        <!-- PHYSICS -->
+
+        <div class="resource-card">
+
+            <h3>
+                ⚡ Physics
+            </h3>
+
+            <p>
+
+                Learn about mechanics, electricity,
+                waves, heat, magnetism,
+                and physical phenomena.
+
+            </p>
+
+            <a href="physics.html"
+               class="button">
+
+                Open Physics
+
+            </a>
+
+        </div>
+
+
+        <!-- REVISION -->
+
+        <div class="resource-card">
+
+            <h3>
+                📝 Revision
+            </h3>
+
+            <p>
+
+                Practice questions and revision
+                activities to prepare for examinations.
+
+            </p>
+
+            <a href="#"
+               class="button">
+
+                Coming Soon
+
+            </a>
+
+        </div>
+
+
+        <!-- SCIENCE & TECHNOLOGY -->
+
+        <div class="resource-card">
+
+            <h3>
+                🔬 Science & Technology
+            </h3>
+
+            <p>
+
+                Discover science projects,
+                technology ideas, robotics,
+                and innovation.
+
+            </p>
+
+            <a href="#"
+               class="button">
+
+                Coming Soon
+
+            </a>
+
+        </div>
+
 
     </div>
 
-    <div class="resources">
+</section>
 
-        <div class="resource-card">
 
-            <h3>Biology Resources</h3>
+<!-- STUDY GUIDE -->
 
-            <p>
-                Access Biology notes, topic summaries,
-                diagrams, practical guides, and revision questions.
-            </p>
+<section class="study-guide">
 
-            <a href="biology.html">Open Biology</a>
+    <h2>
+        How to Use SOI Resources
+    </h2>
 
-        </div>
+    <p>
 
-        <div class="resource-card">
+        Select your subject, explore the available topics,
+        study the provided information, practice questions,
+        and test your understanding. New learning resources
+        will continue to be added to the platform.
 
-            <h3>Chemistry Resources</h3>
+    </p>
 
-            <p>
-                Explore Chemistry notes, chemical reactions,
-                equations, experiments, and revision materials.
-            </p>
+</section>
 
-            <a href="chemistry.html">Open Chemistry</a>
 
-        </div>
-
-        <div class="resource-card">
-
-            <h3>Mathematics Resources</h3>
-
-            <p>
-                Improve your Mathematics skills through examples,
-                formulas, problem-solving, and practice questions.
-            </p>
-
-            <a href="mathematics.html">Open Mathematics</a>
-
-        </div>
-
-        <div class="resource-card">
-
-            <h3>Physics Resources</h3>
-
-            <p>
-                Study Physics concepts, formulas, calculations,
-                experiments, and examination questions.
-            </p>
-
-            <a href="physics.html">Open Physics</a>
-
-        </div>
-
-        <div class="resource-card">
-
-            <h3>Revision Materials</h3>
-
-            <p>
-                Prepare for examinations using revision questions,
-                topic reviews, and practice exercises.
-            </p>
-
-            <a href="#">Start Revision</a>
-
-        </div>
-
-        <div class="resource-card">
-
-            <h3>Science & Technology</h3>
-
-            <p>
-                Discover science projects, technology ideas,
-                innovation, robotics, and practical solutions.
-            </p>
-
-            <a href="#">Explore Innovation</a>
-
-        </div>
-
-    </div>
-
-</div>
+<!-- FOOTER -->
 
 <footer>
 
     <p>
-        &copy; 2026 Source of Information. All Rights Reserved.
+        &copy; 2026 Source of Information.
+        All Rights Reserved.
     </p>
 
     <p>
         Education • Science • Technology • Innovation
     </p>
 
+    <p>
+        Empowering Learners Through Information
+    </p>
+
 </footer>
 
+
 </body>
+
 </html>
