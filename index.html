@@ -1,701 +1,1012 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Source of Information | SOI Platform</title>
+<meta charset="UTF-8">
 
-    <style>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="description"
+content="Source of Information - A platform for education, science, technology, innovation and student development.">
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f8fb;
-            color: #222;
-            line-height: 1.6;
-        }
+<title>
+Source of Information | SOI Platform
+</title>
 
-        /* HEADER */
+<style>
 
-        header {
-            background-color: #0b3d62;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+/* =========================
+   GENERAL SETTINGS
+========================= */
 
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 8px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header p {
-            font-size: 17px;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        /* NAVIGATION */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #222;
+    line-height: 1.6;
+}
 
-        nav {
-            background-color: #062b45;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-            display: inline-block;
-        }
+/* =========================
+   HEADER
+========================= */
 
-        nav a:hover {
-            color: #ffd700;
-        }
+header {
+    background-color: #0b3d62;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
 
-        /* HERO */
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
 
-        .hero {
-            background-color: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
+header p {
+    font-size: 18px;
+}
 
-        .hero h2 {
-            color: #0b3d62;
-            font-size: 38px;
-            margin-bottom: 20px;
-        }
 
-        .hero p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 18px;
-        }
+/* =========================
+   NAVIGATION
+========================= */
 
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 13px 28px;
-            background-color: #0b3d62;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+nav {
+    background-color: #062b45;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .button:hover {
-            background-color: #062b45;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 9px;
+    font-weight: bold;
+    display: inline-block;
+}
 
-        /* ABOUT */
+nav a:hover {
+    color: #ffd700;
+}
 
-        .about {
-            padding: 50px 20px;
-            text-align: center;
-        }
 
-        .about h2 {
-            color: #0b3d62;
-            margin-bottom: 20px;
-        }
+/* =========================
+   HERO SECTION
+========================= */
 
-        .about p {
-            max-width: 800px;
-            margin: auto;
-        }
+.hero {
+    background-color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        /* SUBJECTS */
+.hero h2 {
+    font-size: 38px;
+    color: #0b3d62;
+    margin-bottom: 20px;
+}
 
-        .subjects {
-            background-color: #eaf2f7;
-            padding: 50px 20px;
-            text-align: center;
-        }
+.hero p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+}
 
-        .subjects h2 {
-            color: #0b3d62;
-            margin-bottom: 30px;
-        }
+.hero-buttons {
+    margin-top: 30px;
+}
 
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-        }
 
-        .card {
-            background-color: white;
-            width: 250px;
-            padding: 30px 20px;
-            border-radius: 8px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+/* =========================
+   BUTTONS
+========================= */
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+.button {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 25px;
+    background-color: #0b3d62;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-        .card h3 {
-            color: #0b3d62;
-            margin-bottom: 12px;
-        }
+.button:hover {
+    background-color: #062b45;
+}
 
-        .card p {
-            margin-bottom: 15px;
-        }
+.button-secondary {
+    background-color: #555;
+}
 
-        .card a {
-            color: #0b3d62;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.button-secondary:hover {
+    background-color: #333;
+}
 
-        .card a:hover {
-            color: #d4a900;
-        }
 
-        /* RESOURCES */
+/* =========================
+   ABOUT SECTION
+========================= */
 
-        .resources {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: white;
-        }
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
 
-        .resources h2 {
-            color: #0b3d62;
-            margin-bottom: 15px;
-        }
+.about h2 {
+    color: #0b3d62;
+    margin-bottom: 20px;
+}
 
-        .resources-intro {
-            max-width: 750px;
-            margin: 0 auto 30px;
-        }
+.about p {
+    max-width: 850px;
+    margin: auto;
+}
 
-        .resource-boxes {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
 
-        .resource-box {
-            background-color: #f4f8fb;
-            width: 280px;
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
+/* =========================
+   SUBJECTS
+========================= */
 
-        .resource-box h3 {
-            color: #0b3d62;
-            margin-bottom: 10px;
-        }
+.subjects {
+    background-color: #eaf2f7;
+    padding: 60px 20px;
+}
 
-        .resource-box a {
-            display: inline-block;
-            margin-top: 15px;
-            color: #0b3d62;
-            font-weight: bold;
-            text-decoration: none;
-        }
+.subjects h2 {
+    text-align: center;
+    color: #0b3d62;
+    margin-bottom: 35px;
+}
 
-        /* WHY SOI */
+.subject-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
 
-        .why-soi {
-            padding: 50px 20px;
-            text-align: center;
-        }
+.subject-card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
 
-        .why-soi h2 {
-            color: #0b3d62;
-            margin-bottom: 30px;
-        }
+.subject-card h3 {
+    color: #0b3d62;
+    margin-bottom: 12px;
+}
 
-        .benefits {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.subject-card p {
+    margin-bottom: 15px;
+}
 
-        .benefit {
-            background-color: white;
-            width: 250px;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
 
-        .benefit h3 {
-            color: #0b3d62;
-            margin-bottom: 10px;
-        }
+/* =========================
+   INNOVATION SECTION
+========================= */
 
-        /* CALL TO ACTION */
+.innovation {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+}
 
-        .cta {
-            background-color: #0b3d62;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+.innovation h2 {
+    color: #0b3d62;
+    margin-bottom: 20px;
+}
 
-        .cta h2 {
-            margin-bottom: 15px;
-        }
+.innovation p {
+    max-width: 800px;
+    margin: auto;
+}
 
-        .cta .button {
-            background-color: white;
-            color: #0b3d62;
-        }
 
-        /* FOOTER */
+/* =========================
+   PROJECTS
+========================= */
 
-        footer {
-            background-color: #062b45;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
+.projects {
+    background-color: #eaf2f7;
+    padding: 60px 20px;
+}
 
-        footer p {
-            margin: 5px 0;
-        }
+.projects h2 {
+    text-align: center;
+    color: #0b3d62;
+    margin-bottom: 35px;
+}
 
-        /* MOBILE */
+.project-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
 
-        @media (max-width: 700px) {
+.project-card {
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 
-            header h1 {
-                font-size: 28px;
-            }
+.project-card h3 {
+    color: #0b3d62;
+    margin-bottom: 10px;
+}
 
-            .hero h2 {
-                font-size: 30px;
-            }
 
-            nav a {
-                display: block;
-                margin: 8px 0;
-            }
+/* =========================
+   WHY SOI
+========================= */
 
-            .card,
-            .resource-box,
-            .benefit {
-                width: 90%;
-            }
+.why-soi {
+    background-color: white;
+    padding: 60px 20px;
+}
 
-        }
+.why-soi h2 {
+    text-align: center;
+    color: #0b3d62;
+    margin-bottom: 35px;
+}
 
-    </style>
+.why-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.why-card {
+    width: 300px;
+    padding: 25px;
+    text-align: center;
+    background-color: #f4f8fb;
+    border-radius: 10px;
+}
+
+.why-card h3 {
+    color: #0b3d62;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    background-color: #0b3d62;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.cta h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    max-width: 750px;
+    margin: auto;
+}
+
+.cta .button {
+    background-color: white;
+    color: #0b3d62;
+}
+
+.cta .button:hover {
+    background-color: #ddd;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #062b45;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    margin: 6px;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .subject-card,
+    .project-card,
+    .why-card {
+        width: 90%;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-    <!-- HEADER -->
 
-    <header>
+<!-- =========================
+     HEADER
+========================= -->
 
-        <h1>Source of Information</h1>
+<header>
 
-        <p>
-            SOI Educational, Science, Technology and Innovation Platform
-        </p>
+<h1>
+SOURCE OF INFORMATION
+</h1>
 
-    </header>
+<p>
+Education • Science • Technology • Innovation
+</p>
 
+</header>
 
-    <!-- NAVIGATION -->
 
-    <nav>
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-        <a href="index.html">Home</a>
+<nav>
 
-        <a href="about.html">About</a>
+<a href="index.html">
+Home
+</a>
 
-        <a href="biology.html">Biology</a>
+<a href="about.html">
+About
+</a>
 
-        <a href="chemistry.html">Chemistry</a>
+<a href="biology.html">
+Biology
+</a>
 
-        <a href="mathematics.html">Mathematics</a>
+<a href="chemistry.html">
+Chemistry
+</a>
 
-        <a href="physics.html">Physics</a>
+<a href="mathematics.html">
+Mathematics
+</a>
 
-        <a href="resources.html">Resources</a>
-        <a href="innovation.html">Innovation</a>
+<a href="physics.html">
+Physics
+</a>
 
-        <a href="committee.html">Committee</a>
+<a href="resources.html">
+Resources
+</a>
 
-        <a href="contact.html">Contact</a>
+<a href="innovation.html">
+Innovation
+</a>
 
-    </nav>
+<a href="committee.html">
+Committee
+</a>
 
+<a href="contact.html">
+Contact
+</a>
 
-    <!-- HERO SECTION -->
+</nav>
 
-    <section class="hero">
 
-        <h2>
-            Welcome to Source of Information
-        </h2>
+<!-- =========================
+     HERO
+========================= -->
 
-        <p>
+<section class="hero">
 
-            Source of Information (SOI) is a digital educational
-            platform designed to provide learners with accessible
-            academic knowledge, learning resources, science,
-            technology, innovation, and opportunities for personal
-            and academic growth.
+<h2>
+Welcome to Source of Information
+</h2>
 
-        </p>
+<p>
 
-        <a href="about.html" class="button">
-            Learn More About SOI
-        </a>
+A learning and innovation platform designed
+to connect students with knowledge, educational
+resources, science, technology, research,
+and creative opportunities.
 
-    </section>
+</p>
 
 
-    <!-- ABOUT SECTION -->
+<div class="hero-buttons">
 
-    <section class="about">
+<a href="resources.html"
+class="button">
 
-        <h2>
-            About Source of Information
-        </h2>
+Explore Learning Resources
 
-        <p>
+</a>
 
-            Our platform is committed to making educational information
-            easier to access and understand. SOI supports learners in
-            Biology, Chemistry, Mathematics, Physics, Science,
-            Technology, and Innovation.
+<a href="innovation.html"
+class="button button-secondary">
 
-        </p>
+Explore Innovation
 
-        <a href="about.html" class="button">
-            Read More
-        </a>
+</a>
 
-    </section>
+</div>
 
+</section>
 
-    <!-- SUBJECTS SECTION -->
 
-    <section class="subjects">
+<!-- =========================
+     ABOUT SOI
+========================= -->
 
-        <h2>
-            Explore Our Subjects
-        </h2>
+<section class="about">
 
-        <div class="cards">
+<h2>
+What is Source of Information?
+</h2>
 
+<p>
 
-            <!-- BIOLOGY -->
+Source of Information, commonly known as SOI,
+is an educational platform that promotes access
+to knowledge and encourages students to explore
+science, technology, mathematics, innovation,
+research, and practical problem-solving.
 
-            <div class="card">
+SOI aims to empower learners with information
+and skills that can help them succeed academically
+and contribute positively to their communities.
 
-                <h3>
-                    Biology
-                </h3>
+</p>
 
-                <p>
+<a href="about.html"
+class="button">
 
-                    Explore living organisms, cells, human biology,
-                    ecology, genetics, and life processes.
+Learn More About SOI
 
-                </p>
+</a>
 
-                <a href="biology.html">
-                    Explore Biology →
-                </a>
+</section>
 
-            </div>
 
+<!-- =========================
+     SUBJECTS
+========================= -->
 
-            <!-- CHEMISTRY -->
+<section class="subjects">
 
-            <div class="card">
+<h2>
+Explore Academic Subjects
+</h2>
 
-                <h3>
-                    Chemistry
-                </h3>
 
-                <p>
+<div class="subject-grid">
 
-                    Learn about matter, atoms, elements,
-                    compounds, chemical reactions, and experiments.
 
-                </p>
+<!-- BIOLOGY -->
 
-                <a href="chemistry.html">
-                    Explore Chemistry →
-                </a>
+<div class="subject-card">
 
-            </div>
+<h3>
+🧬 Biology
+</h3>
 
+<p>
 
-            <!-- MATHEMATICS -->
+Explore living organisms, cells,
+genetics, ecology, human biology,
+plants, and microorganisms.
 
-            <div class="card">
+</p>
 
-                <h3>
-                    Mathematics
-                </h3>
+<a href="biology.html"
+class="button">
 
-                <p>
+Explore Biology
 
-                    Improve mathematical skills through
-                    problem-solving, formulas, examples, and practice.
+</a>
 
-                </p>
+</div>
 
-                <a href="mathematics.html">
-                    Explore Mathematics →
-                </a>
 
-            </div>
+<!-- CHEMISTRY -->
 
+<div class="subject-card">
 
-            <!-- PHYSICS -->
+<h3>
+🧪 Chemistry
+</h3>
 
-            <div class="card">
+<p>
 
-                <h3>
-                    Physics
-                </h3>
+Understand matter, chemical reactions,
+atomic structure, acids, bases,
+and organic chemistry.
 
-                <p>
+</p>
 
-                    Discover forces, motion, energy, electricity,
-                    waves, heat, and the physical world.
+<a href="chemistry.html"
+class="button">
 
-                </p>
+Explore Chemistry
 
-                <a href="physics.html">
-                    Explore Physics →
-                </a>
+</a>
 
-            </div>
+</div>
 
 
-        </div>
+<!-- MATHEMATICS -->
 
-    </section>
+<div class="subject-card">
 
+<h3>
+➗ Mathematics
+</h3>
 
-    <!-- LEARNING RESOURCES -->
+<p>
 
-    <section class="resources">
+Develop skills in algebra, geometry,
+statistics, trigonometry, and
+problem-solving.
 
-        <h2>
-            Learning Resources
-        </h2>
+</p>
 
-        <p class="resources-intro">
+<a href="mathematics.html"
+class="button">
 
-            Access educational materials designed to support
-            learning, revision, research, examination preparation,
-            science projects, and innovation.
+Explore Mathematics
 
-        </p>
+</a>
 
+</div>
 
-        <div class="resource-boxes">
 
+<!-- PHYSICS -->
 
-            <div class="resource-box">
+<div class="subject-card">
 
-                <h3>
-                    📚 Study Notes
-                </h3>
+<h3>
+⚡ Physics
+</h3>
 
-                <p>
-                    Access organized learning materials
-                    and subject notes.
-                </p>
+<p>
 
-                <a href="resources.html">
-                    View Resources →
-                </a>
+Discover forces, energy, motion,
+electricity, waves, magnetism,
+and light.
 
-            </div>
+</p>
 
+<a href="physics.html"
+class="button">
 
-            <div class="resource-box">
+Explore Physics
 
-                <h3>
-                    📝 Revision
-                </h3>
+</a>
 
-                <p>
-                    Practice questions and prepare
-                    for academic examinations.
-                </p>
+</div>
 
-                <a href="resources.html">
-                    Start Revision →
-                </a>
 
-            </div>
+</div>
 
+</section>
 
-            <div class="resource-box">
 
-                <h3>
-                    🔬 Science & Technology
-                </h3>
+<!-- =========================
+     INNOVATION
+========================= -->
 
-                <p>
-                    Explore science projects, technology,
-                    robotics, and innovation.
-                </p>
+<section class="innovation">
 
-                <a href="resources.html">
-                    Explore Innovation →
-                </a>
+<h2>
+Science, Technology & Innovation
+</h2>
 
-            </div>
+<p>
 
+SOI encourages learners to move beyond
+the classroom by identifying real-world
+problems and developing creative solutions.
 
-        </div>
+Explore robotics, programming, Artificial
+Intelligence, environmental solutions,
+renewable energy, agriculture, and
+engineering projects.
 
-    </section>
+</p>
 
+<a href="innovation.html"
+class="button">
 
-    <!-- WHY SOI -->
+Visit Innovation Centre
 
-    <section class="why-soi">
+</a>
 
-        <h2>
-            Why Use SOI?
-        </h2>
+</section>
 
-        <div class="benefits">
 
+<!-- =========================
+     FEATURED PROJECTS
+========================= -->
 
-            <div class="benefit">
+<section class="projects">
 
-                <h3>
-                    Accessible Learning
-                </h3>
+<h2>
+Featured Project Ideas
+</h2>
 
-                <p>
 
-                    Access educational information
-                    from anywhere using digital technology.
+<div class="project-grid">
 
-                </p>
 
-            </div>
+<div class="project-card">
 
+<h3>
+🌧️ Smart Rainwater Harvesting
+</h3>
 
-            <div class="benefit">
+<p>
 
-                <h3>
-                    Academic Support
-                </h3>
+Develop a system for collecting and storing
+rainwater for domestic and agricultural use.
 
-                <p>
+</p>
 
-                    Improve understanding through
-                    organized learning materials.
+</div>
 
-                </p>
 
-            </div>
+<div class="project-card">
 
+<h3>
+☀️ Solar Phone Charger
+</h3>
 
-            <div class="benefit">
+<p>
 
-                <h3>
-                    Innovation
-                </h3>
+Explore renewable energy by designing
+a simple solar-powered phone charger.
 
-                <p>
+</p>
 
-                    Discover ideas and projects that
-                    encourage creativity and problem-solving.
+</div>
 
-                </p>
 
-            </div>
+<div class="project-card">
 
+<h3>
+🌱 Smart Greenhouse
+</h3>
 
-            <div class="benefit">
+<p>
 
-                <h3>
-                    Science & Technology
-                </h3>
+Use sensors and technology to monitor
+temperature, humidity, and plant conditions.
 
-                <p>
+</p>
 
-                    Develop interest and skills in science,
-                    technology, engineering, and innovation.
+</div>
 
-                </p>
 
-            </div>
+<div class="project-card">
 
+<h3>
+🤖 Robotics Projects
+</h3>
 
-        </div>
+<p>
 
-    </section>
+Design automated systems using sensors,
+microcontrollers, motors, and programming.
 
+</p>
 
-    <!-- CALL TO ACTION -->
+</div>
 
-    <section class="cta">
 
-        <h2>
-            Start Your Learning Journey Today
-        </h2>
+<div class="project-card">
 
-        <p>
+<h3>
+♻️ Waste Management
+</h3>
 
-            Explore our subjects and discover
-            new knowledge with SOI.
+<p>
 
-        </p>
+Develop innovative ways to reduce,
+sort, reuse, and recycle waste.
 
-        <a href="resources.html" class="button">
-            Explore Learning Resources
-        </a>
+</p>
 
-    </section>
+</div>
 
 
-    <!-- FOOTER -->
+<div class="project-card">
 
-    <footer>
+<h3>
+🧠 AI for Community Solutions
+</h3>
 
-        <p>
-            &copy; 2026 Source of Information.
-            All Rights Reserved.
-        </p>
+<p>
 
-        <p>
-            Education • Science • Technology • Innovation
-        </p>
+Explore responsible applications of
+Artificial Intelligence in education,
+agriculture, health, and climate resilience.
 
-        <p>
-            Empowering Learners Through Information
-        </p>
+</p>
 
-    </footer>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     WHY SOI
+========================= -->
+
+<section class="why-soi">
+
+<h2>
+Why Join Source of Information?
+</h2>
+
+
+<div class="why-grid">
+
+
+<div class="why-card">
+
+<h3>
+📚 Learn
+</h3>
+
+<p>
+
+Access educational materials and
+develop a deeper understanding
+of academic subjects.
+
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>
+🔬 Discover
+</h3>
+
+<p>
+
+Explore science, technology,
+research, and new areas of knowledge.
+
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>
+💡 Innovate
+</h3>
+
+<p>
+
+Turn ideas into practical solutions
+that address real-world challenges.
+
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>
+🤝 Collaborate
+</h3>
+
+<p>
+
+Connect with other learners and
+work together on meaningful projects.
+
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>
+🚀 Grow
+</h3>
+
+<p>
+
+Develop academic, digital,
+creative, and problem-solving skills.
+
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>
+🌍 Make an Impact
+</h3>
+
+<p>
+
+Use knowledge and innovation to
+contribute to your school and community.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CALL TO ACTION
+========================= -->
+
+<section class="cta">
+
+<h2>
+Be Part of the SOI Community
+</h2>
+
+<p>
+
+Have a question? Have an innovative idea?
+Want to participate in a science project?
+We would love to hear from you.
+
+</p>
+
+<a href="contact.html"
+class="button">
+
+Contact SOI
+
+</a>
+
+<a href="committee.html"
+class="button">
+
+Meet the Committee
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+&copy; 2026 Source of Information.
+All Rights Reserved.
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="resources.html">
+Resources
+</a>
+
+<a href="innovation.html">
+Innovation
+</a>
+
+<a href="committee.html">
+Committee
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+<p>
+Empowering Learners Through Information
+</p>
+
+</footer>
+
 
 </body>
+
 </html>
