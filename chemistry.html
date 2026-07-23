@@ -1,160 +1,910 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemistry | Source of Information</title>
 
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f8fb;
-            color: #222;
-            line-height: 1.6;
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #0b3d62;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
+<title>
+Chemistry Learning Centre | SOI
+</title>
 
-        nav {
-            background: #062b45;
-            padding: 12px;
-            text-align: center;
-        }
+<style>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav a:hover { color: #ffd700; }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #222;
+    line-height: 1.6;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+/* HEADER */
 
-        .intro, .card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+header {
+    background-color: #0b3d62;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
 
-        .intro {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
 
-        h2, h3 { color: #0b3d62; }
+/* NAVIGATION */
 
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
+nav {
+    background-color: #062b45;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .card {
-            width: 280px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+}
 
-        footer {
-            background: #062b45;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
+nav a:hover {
+    color: #ffd700;
+}
 
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 8px;
-            }
+/* INTRO */
 
-            .card { width: 90%; }
-        }
-    </style>
+.intro {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h2 {
+    color: #0b3d62;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* TOPICS */
+
+.topics {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.topics h2 {
+    color: #0b3d62;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.topic-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.topic-card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.topic-card h3 {
+    color: #0b3d62;
+    margin-bottom: 12px;
+}
+
+.topic-card ul {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.topic-card li {
+    margin-bottom: 8px;
+}
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: #0b3d62;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #062b45;
+}
+
+/* NOTES */
+
+.notes {
+    background-color: #eaf2f7;
+    padding: 50px 20px;
+}
+
+.notes-box {
+    background-color: white;
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.notes-box h3 {
+    color: #0b3d62;
+    margin-bottom: 15px;
+}
+
+.notes-box h4 {
+    color: #0b3d62;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* REVISION */
+
+.revision {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.revision h2 {
+    color: #0b3d62;
+    margin-bottom: 15px;
+}
+
+.revision p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #062b45;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .topic-card {
+        width: 90%;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
-    <h1>Chemistry</h1>
-    <p>Understanding Matter and Chemical Reactions</p>
+
+<h1>
+Chemistry Learning Centre
+</h1>
+
+<p>
+Explore Matter • Understand Reactions • Discover Chemistry
+</p>
+
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="biology.html">Biology</a>
-    <a href="chemistry.html">Chemistry</a>
-    <a href="mathematics.html">Mathematics</a>
-    <a href="physics.html">Physics</a>
-    <a href="committee.html">Committee</a>
-    <a href="contact.html">Contact</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="biology.html">
+Biology
+</a>
+
+<a href="chemistry.html">
+Chemistry
+</a>
+
+<a href="mathematics.html">
+Mathematics
+</a>
+
+<a href="physics.html">
+Physics
+</a>
+
+<a href="resources.html">
+Resources
+</a>
+
+<a href="committee.html">
+Committee
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
 </nav>
 
-<div class="container">
 
-    <div class="intro">
-        <h2>Welcome to Chemistry</h2>
-        <p>
-            Explore the world of matter, elements, compounds,
-            chemical reactions, acids, bases, and practical chemistry.
-        </p>
-    </div>
+<!-- INTRODUCTION -->
 
-    <div class="cards">
+<section class="intro">
 
-        <div class="card">
-            <h3>Atomic Structure</h3>
-            <p>Learn about atoms, electrons, protons, neutrons, and electronic configuration.</p>
-        </div>
+<h2>
+Welcome to Chemistry
+</h2>
 
-        <div class="card">
-            <h3>Periodic Table</h3>
-            <p>Study elements, groups, periods, and periodic trends.</p>
-        </div>
+<p>
 
-        <div class="card">
-            <h3>Chemical Reactions</h3>
-            <p>Understand chemical equations, balancing equations, and types of reactions.</p>
-        </div>
+Chemistry is the study of matter, its properties,
+composition, structure, and the changes it undergoes.
+Explore the topics below to develop your understanding
+of Chemistry.
 
-        <div class="card">
-            <h3>Acids and Bases</h3>
-            <p>Explore properties of acids and bases, indicators, pH, and neutralization.</p>
-        </div>
+</p>
 
-        <div class="card">
-            <h3>Organic Chemistry</h3>
-            <p>Study hydrocarbons, alcohols, carboxylic acids, and organic compounds.</p>
-        </div>
+</section>
 
-        <div class="card">
-            <h3>Revision</h3>
-            <p>Practice Chemistry questions to improve your understanding and examination skills.</p>
-        </div>
 
-    </div>
+<!-- TOPICS -->
+
+<section class="topics">
+
+<h2>
+Explore Chemistry Topics
+</h2>
+
+
+<div class="topic-grid">
+
+
+<!-- ATOMIC STRUCTURE -->
+
+<div class="topic-card">
+
+<h3>
+⚛️ Atomic Structure
+</h3>
+
+<p>
+Learn about atoms and the particles that make them.
+</p>
+
+<ul>
+
+<li>
+Protons
+</li>
+
+<li>
+Neutrons
+</li>
+
+<li>
+Electrons
+</li>
+
+<li>
+Electronic configuration
+</li>
+
+<li>
+Isotopes
+</li>
+
+</ul>
+
+<a href="#atomic-notes"
+class="button">
+
+View Notes
+
+</a>
 
 </div>
 
+
+<!-- PERIODIC TABLE -->
+
+<div class="topic-card">
+
+<h3>
+🧪 Periodic Table
+</h3>
+
+<p>
+Explore the arrangement and properties of elements.
+</p>
+
+<ul>
+
+<li>
+Groups and periods
+</li>
+
+<li>
+Metals and non-metals
+</li>
+
+<li>
+Periodic trends
+</li>
+
+<li>
+Element symbols
+</li>
+
+<li>
+Chemical properties
+</li>
+
+</ul>
+
+<a href="#periodic-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+<!-- CHEMICAL REACTIONS -->
+
+<div class="topic-card">
+
+<h3>
+⚗️ Chemical Reactions
+</h3>
+
+<p>
+Understand how substances react and form new products.
+</p>
+
+<ul>
+
+<li>
+Chemical equations
+</li>
+
+<li>
+Balancing equations
+</li>
+
+<li>
+Types of reactions
+</li>
+
+<li>
+Energy changes
+</li>
+
+<li>
+Reaction rates
+</li>
+
+</ul>
+
+<a href="#reaction-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+<!-- ACIDS BASES -->
+
+<div class="topic-card">
+
+<h3>
+🧪 Acids and Bases
+</h3>
+
+<p>
+Study the properties and reactions of acids and bases.
+</p>
+
+<ul>
+
+<li>
+Properties of acids
+</li>
+
+<li>
+Properties of bases
+</li>
+
+<li>
+Indicators
+</li>
+
+<li>
+pH scale
+</li>
+
+<li>
+Neutralization
+</li>
+
+</ul>
+
+<a href="#acid-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+<!-- ORGANIC CHEMISTRY -->
+
+<div class="topic-card">
+
+<h3>
+🧬 Organic Chemistry
+</h3>
+
+<p>
+Explore carbon compounds and their reactions.
+</p>
+
+<ul>
+
+<li>
+Hydrocarbons
+</li>
+
+<li>
+Alkanes
+</li>
+
+<li>
+Alkenes
+</li>
+
+<li>
+Alcohols
+</li>
+
+<li>
+Carboxylic acids
+</li>
+
+</ul>
+
+<a href="#organic-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+<!-- PRACTICAL CHEMISTRY -->
+
+<div class="topic-card">
+
+<h3>
+🔬 Practical Chemistry
+</h3>
+
+<p>
+Develop laboratory skills and understand experiments.
+</p>
+
+<ul>
+
+<li>
+Laboratory safety
+</li>
+
+<li>
+Apparatus
+</li>
+
+<li>
+Separation techniques
+</li>
+
+<li>
+Chemical tests
+</li>
+
+<li>
+Observations</li>
+
+</ul>
+
+<a href="#practical-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ATOMIC NOTES -->
+
+<section class="notes"
+id="atomic-notes">
+
+<div class="notes-box">
+
+<h3>
+Atomic Structure — Introduction
+</h3>
+
+<p>
+
+An atom is the smallest particle of an element
+that retains the chemical properties of that element.
+
+</p>
+
+<h4>
+Subatomic Particles
+</h4>
+
+<p>
+
+Protons have a positive charge and are found
+in the nucleus. Neutrons have no charge and are
+also found in the nucleus. Electrons have a negative
+charge and move around the nucleus in energy levels.
+
+</p>
+
+<h4>
+Atomic Number
+</h4>
+
+<p>
+
+The atomic number is the number of protons
+in the nucleus of an atom.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PERIODIC NOTES -->
+
+<section class="notes"
+id="periodic-notes">
+
+<div class="notes-box">
+
+<h3>
+Periodic Table — Introduction
+</h3>
+
+<p>
+
+The periodic table organizes elements according
+to their atomic numbers and chemical properties.
+
+</p>
+
+<h4>
+Groups</h4>
+
+<p>
+
+Elements in the same group generally have
+similar chemical properties because they have
+similar numbers of outer-shell electrons.
+
+</p>
+
+<h4>
+Periods
+</h4>
+
+<p>
+
+A period is a horizontal row in the periodic table.
+The period number indicates the number of occupied
+electron shells.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- REACTION NOTES -->
+
+<section class="notes"
+id="reaction-notes">
+
+<div class="notes-box">
+
+<h3>
+Chemical Reactions — Introduction
+</h3>
+
+<p>
+
+A chemical reaction occurs when one or more
+substances change to form new substances.
+
+</p>
+
+<h4>
+Examples</h4>
+
+<p>
+
+Combustion, neutralization, displacement,
+decomposition, and combination are examples
+of chemical reactions.
+
+</p>
+
+<h4>
+Chemical Equations
+</h4>
+
+<p>
+
+Chemical equations represent chemical reactions
+using chemical symbols and formulas.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ACIDS NOTES -->
+
+<section class="notes"
+id="acid-notes">
+
+<div class="notes-box">
+
+<h3>
+Acids and Bases — Introduction
+</h3>
+
+<p>
+
+Acids are substances that produce hydrogen ions
+in aqueous solution, while bases are substances
+that react with acids and may produce hydroxide
+ions in aqueous solution.
+
+</p>
+
+<h4>
+pH Scale
+</h4>
+
+<p>
+
+The pH scale is used to measure how acidic
+or alkaline a solution is. The scale commonly
+ranges from 0 to 14.
+
+</p>
+
+<h4>
+Neutralization
+</h4>
+
+<p>
+
+A neutralization reaction occurs when an acid
+reacts with a base to form salt and water.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ORGANIC NOTES -->
+
+<section class="notes"
+id="organic-notes">
+
+<div class="notes-box">
+
+<h3>
+Organic Chemistry — Introduction
+</h3>
+
+<p>
+
+Organic chemistry is the study of carbon compounds.
+
+</p>
+
+<h4>
+Hydrocarbons
+</h4>
+
+<p>
+
+Hydrocarbons are compounds made up of carbon
+and hydrogen atoms.
+
+</p>
+
+<h4>
+Examples
+</h4>
+
+<p>
+
+Important groups include alkanes, alkenes,
+alkynes, alcohols, and carboxylic acids.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PRACTICAL NOTES -->
+
+<section class="notes"
+id="practical-notes">
+
+<div class="notes-box">
+
+<h3>
+Practical Chemistry — Introduction
+</h3>
+
+<p>
+
+Practical Chemistry involves carrying out
+experiments to investigate chemical substances
+and reactions.
+
+</p>
+
+<h4>
+Laboratory Safety
+</h4>
+
+<p>
+
+Always wear appropriate protective equipment,
+follow instructions carefully, handle chemicals
+responsibly, and keep the laboratory clean.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="revision">
+
+<h2>
+Chemistry Revision
+</h2>
+
+<p>
+
+Regular practice helps you understand chemical
+concepts and prepare for examinations.
+More Chemistry revision questions and answers
+will be added to the SOI platform.
+
+</p>
+
+<a href="resources.html"
+class="button">
+
+Back to Resources
+
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
 <footer>
-    <p>&copy; 2026 Source of Information. All Rights Reserved.</p>
-    <p>Education • Science • Technology • Innovation</p>
+
+<p>
+&copy; 2026 Source of Information.
+All Rights Reserved.
+</p>
+
+<p>
+Education • Science • Technology • Innovation
+</p>
+
+<p>
+Empowering Learners Through Information
+</p>
+
 </footer>
 
+
 </body>
+
 </html>
