@@ -3,196 +3,232 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Learning Resources | Source of Information
-    </title>
+<title>
+Learning Resources | Source of Information
+</title>
 
-    <style>
+<style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f8fb;
-            color: #222;
-            line-height: 1.6;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #222;
+    line-height: 1.6;
+}
 
-        /* HEADER */
+/* HEADER */
 
-        header {
-            background-color: #0b3d62;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
+header {
+    background-color: #0b3d62;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
 
-        /* NAVIGATION */
+/* NAVIGATION */
 
-        nav {
-            background-color: #062b45;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+nav {
+    background-color: #062b45;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-            display: inline-block;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+}
 
-        nav a:hover {
-            color: #ffd700;
-        }
+nav a:hover {
+    color: #ffd700;
+}
 
-        /* INTRO */
+/* INTRO */
 
-        .intro {
-            background-color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+.intro {
+    background-color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
 
-        .intro h2 {
-            color: #0b3d62;
-            margin-bottom: 15px;
-            font-size: 30px;
-        }
+.intro h2 {
+    color: #0b3d62;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
 
-        .intro p {
-            max-width: 750px;
-            margin: auto;
-        }
+.intro p {
+    max-width: 800px;
+    margin: auto;
+}
 
-        /* RESOURCE SECTION */
+/* RESOURCE SECTION */
 
-        .resources {
-            padding: 50px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.resources {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
 
-        .resources h2 {
-            text-align: center;
-            color: #0b3d62;
-            margin-bottom: 30px;
-        }
+.resources h2 {
+    text-align: center;
+    color: #0b3d62;
+    margin-bottom: 35px;
+}
 
-        .resource-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-        }
+/* RESOURCE GRID */
 
-        /* RESOURCE CARD */
+.resource-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
 
-        .resource-card {
-            background-color: white;
-            width: 300px;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
+/* RESOURCE CARD */
 
-        .resource-card:hover {
-            transform: translateY(-5px);
-        }
+.resource-card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
 
-        .resource-card h3 {
-            color: #0b3d62;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+.resource-card h3 {
+    color: #0b3d62;
+    margin-bottom: 12px;
+}
 
-        .resource-card p {
-            margin-bottom: 20px;
-        }
+.resource-card ul {
+    margin: 15px 0 0 20px;
+}
 
-        /* BUTTONS */
+.resource-card li {
+    margin-bottom: 8px;
+}
 
-        .button {
-            display: inline-block;
-            padding: 11px 20px;
-            background-color: #0b3d62;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+/* SUBJECT RESOURCES */
 
-        .button:hover {
-            background-color: #062b45;
-        }
+.subjects {
+    background-color: #eaf2f7;
+    padding: 50px 20px;
+}
 
-        /* STUDY GUIDE */
+.subjects h2 {
+    text-align: center;
+    color: #0b3d62;
+    margin-bottom: 30px;
+}
 
-        .study-guide {
-            background-color: #eaf2f7;
-            padding: 50px 20px;
-            text-align: center;
-        }
+.subject-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
 
-        .study-guide h2 {
-            color: #0b3d62;
-            margin-bottom: 20px;
-        }
+.subject-card {
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 
-        .study-guide p {
-            max-width: 750px;
-            margin: auto;
-        }
+.subject-card h3 {
+    color: #0b3d62;
+    margin-bottom: 10px;
+}
 
-        /* FOOTER */
+/* BUTTON */
 
-        footer {
-            background-color: #062b45;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 11px 20px;
+    background-color: #0b3d62;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-        footer p {
-            margin: 5px;
-        }
+.button:hover {
+    background-color: #062b45;
+}
 
-        /* MOBILE */
+/* NOTICE */
 
-        @media (max-width: 700px) {
+.notice {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
 
-            nav a {
-                display: block;
-                margin: 8px;
-            }
+.notice h2 {
+    color: #0b3d62;
+    margin-bottom: 15px;
+}
 
-            .resource-card {
-                width: 90%;
-            }
+.notice p {
+    max-width: 750px;
+    margin: auto;
+}
 
-        }
+/* FOOTER */
 
-    </style>
+footer {
+    background-color: #062b45;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .resource-card,
+    .subject-card {
+        width: 90%;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -204,13 +240,13 @@
 
 <header>
 
-    <h1>
-        SOI Learning Resources
-    </h1>
+<h1>
+SOI Learning Resources
+</h1>
 
-    <p>
-        Learn • Practice • Revise • Succeed
-    </p>
+<p>
+Learn • Practice • Revise • Succeed
+</p>
 
 </header>
 
@@ -219,41 +255,45 @@
 
 <nav>
 
-    <a href="index.html">
-        Home
-    </a>
+<a href="index.html">
+Home
+</a>
 
-    <a href="about.html">
-        About
-    </a>
+<a href="about.html">
+About
+</a>
 
-    <a href="biology.html">
-        Biology
-    </a>
+<a href="biology.html">
+Biology
+</a>
 
-    <a href="chemistry.html">
-        Chemistry
-    </a>
+<a href="chemistry.html">
+Chemistry
+</a>
 
-    <a href="mathematics.html">
-        Mathematics
-    </a>
+<a href="mathematics.html">
+Mathematics
+</a>
 
-    <a href="physics.html">
-        Physics
-    </a>
+<a href="physics.html">
+Physics
+</a>
 
-    <a href="resources.html">
-        Resources
-    </a>
+<a href="resources.html">
+Resources
+</a>
 
-    <a href="committee.html">
-        Committee
-    </a>
+<a href="innovation.html">
+Innovation
+</a>
 
-    <a href="contact.html">
-        Contact
-    </a>
+<a href="committee.html">
+Committee
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </nav>
 
@@ -262,210 +302,451 @@
 
 <section class="intro">
 
-    <h2>
-        Welcome to the SOI Resource Centre
-    </h2>
+<h2>
+Welcome to the SOI Resource Centre
+</h2>
 
-    <p>
+<p>
 
-        This section provides students with organized
-        learning resources to help them understand
-        academic concepts, revise effectively,
-        practice questions, and prepare for examinations.
+Find educational resources designed to help students
+understand concepts, revise for examinations,
+develop practical skills, and explore science,
+technology, and innovation.
 
-    </p>
+</p>
 
 </section>
 
 
-<!-- RESOURCES -->
+<!-- RESOURCE CATEGORIES -->
 
 <section class="resources">
 
-    <h2>
-        Choose Your Subject
-    </h2>
+<h2>
+Resource Categories
+</h2>
 
 
-    <div class="resource-grid">
+<div class="resource-grid">
 
 
-        <!-- BIOLOGY -->
+<!-- NOTES -->
 
-        <div class="resource-card">
+<div class="resource-card">
 
-            <h3>
-                🧬 Biology
-            </h3>
+<h3>
+📚 Study Notes
+</h3>
 
-            <p>
+<p>
 
-                Explore Biology topics including cells,
-                human biology, ecology, genetics,
-                and plant biology.
+Access organized learning notes covering
+important academic topics.
 
-            </p>
+</p>
 
-            <a href="biology.html"
-               class="button">
+<ul>
 
-                Open Biology
+<li>
+Biology Notes
+</li>
 
-            </a>
+<li>
+Chemistry Notes
+</li>
 
-        </div>
+<li>
+Mathematics Notes
+</li>
 
+<li>
+Physics Notes
+</li>
 
-        <!-- CHEMISTRY -->
+</ul>
 
-        <div class="resource-card">
+<a href="biology.html"
+class="button">
 
-            <h3>
-                🧪 Chemistry
-            </h3>
+Explore Notes
 
-            <p>
+</a>
 
-                Study atoms, elements, compounds,
-                chemical reactions, acids, bases,
-                and organic chemistry.
+</div>
 
-            </p>
 
-            <a href="chemistry.html"
-               class="button">
+<!-- REVISION -->
 
-                Open Chemistry
+<div class="resource-card">
 
-            </a>
+<h3>
+📝 Revision Materials
+</h3>
 
-        </div>
+<p>
 
+Practice questions and revision materials
+to strengthen your understanding.
 
-        <!-- MATHEMATICS -->
+</p>
 
-        <div class="resource-card">
+<ul>
 
-            <h3>
-                ➗ Mathematics
-            </h3>
+<li>
+Topic questions
+</li>
 
-            <p>
+<li>
+Practice exercises
+</li>
 
-                Develop your mathematical skills
-                through algebra, geometry, statistics,
-                trigonometry, and problem-solving.
+<li>
+Revision guides
+</li>
 
-            </p>
+<li>
+Answer explanations
+</li>
 
-            <a href="mathematics.html"
-               class="button">
+</ul>
 
-                Open Mathematics
+<a href="contact.html"
+class="button">
 
-            </a>
+Request Materials
 
-        </div>
+</a>
 
+</div>
 
-        <!-- PHYSICS -->
 
-        <div class="resource-card">
+<!-- PROJECTS -->
 
-            <h3>
-                ⚡ Physics
-            </h3>
+<div class="resource-card">
 
-            <p>
+<h3>
+🔬 Science Projects
+</h3>
 
-                Learn about mechanics, electricity,
-                waves, heat, magnetism,
-                and physical phenomena.
+<p>
 
-            </p>
+Explore practical project ideas and learn
+how to develop scientific solutions.
 
-            <a href="physics.html"
-               class="button">
+</p>
 
-                Open Physics
+<ul>
 
-            </a>
+<li>
+Project ideas
+</li>
 
-        </div>
+<li>
+Research topics
+</li>
 
+<li>
+Experiment guides
+</li>
 
-        <!-- REVISION -->
+<li>
+Project planning
+</li>
 
-        <div class="resource-card">
+</ul>
 
-            <h3>
-                📝 Revision
-            </h3>
+<a href="innovation.html"
+class="button">
 
-            <p>
+Explore Projects
 
-                Practice questions and revision
-                activities to prepare for examinations.
+</a>
 
-            </p>
+</div>
 
-            <a href="#"
-               class="button">
 
-                Coming Soon
+<!-- TECHNOLOGY -->
 
-            </a>
+<div class="resource-card">
 
-        </div>
+<h3>
+💻 Technology Resources
+</h3>
 
+<p>
 
-        <!-- SCIENCE & TECHNOLOGY -->
+Learn digital skills and explore technology
+and programming resources.
 
-        <div class="resource-card">
+</p>
 
-            <h3>
-                🔬 Science & Technology
-            </h3>
+<ul>
 
-            <p>
+<li>
+Programming
+</li>
 
-                Discover science projects,
-                technology ideas, robotics,
-                and innovation.
+<li>
+Web development
+</li>
 
-            </p>
+<li>
+ICT skills
+</li>
 
-            <a href="#"
-               class="button">
+<li>
+Digital literacy
+</li>
 
-                Coming Soon
+</ul>
 
-            </a>
+<a href="innovation.html"
+class="button">
 
-        </div>
+Explore Technology
 
+</a>
 
-    </div>
+</div>
+
+
+<!-- INNOVATION -->
+
+<div class="resource-card">
+
+<h3>
+💡 Innovation Resources
+</h3>
+
+<p>
+
+Discover ideas and methods for turning problems
+into creative solutions.
+
+</p>
+
+<ul>
+
+<li>
+Innovation ideas
+</li>
+
+<li>
+Design thinking
+</li>
+
+<li>
+Research
+</li>
+
+<li>
+Entrepreneurship
+</li>
+
+</ul>
+
+<a href="innovation.html"
+class="button">
+
+Explore Innovation
+
+</a>
+
+</div>
+
+
+<!-- DIGITAL SKILLS -->
+
+<div class="resource-card">
+
+<h3>
+🌐 Digital Skills
+</h3>
+
+<p>
+
+Develop essential computer and internet skills
+for education and future careers.
+
+</p>
+
+<ul>
+
+<li>
+Computer basics
+</li>
+
+<li>
+Internet skills
+</li>
+
+<li>
+Online research
+</li>
+
+<li>
+Digital safety
+</li>
+
+</ul>
+
+<a href="contact.html"
+class="button">
+
+Request Support
+
+</a>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- STUDY GUIDE -->
+<!-- SUBJECT RESOURCES -->
 
-<section class="study-guide">
+<section class="subjects">
 
-    <h2>
-        How to Use SOI Resources
-    </h2>
+<h2>
+Explore Subjects
+</h2>
 
-    <p>
 
-        Select your subject, explore the available topics,
-        study the provided information, practice questions,
-        and test your understanding. New learning resources
-        will continue to be added to the platform.
+<div class="subject-grid">
 
-    </p>
+
+<!-- BIOLOGY -->
+
+<div class="subject-card">
+
+<h3>
+🧬 Biology
+</h3>
+
+<p>
+
+Explore Biology notes and topics including
+cells, genetics, ecology, human biology,
+plants, and microorganisms.
+
+</p>
+
+<a href="biology.html"
+class="button">
+
+Open Biology
+
+</a>
+
+</div>
+
+
+<!-- CHEMISTRY -->
+
+<div class="subject-card">
+
+<h3>
+🧪 Chemistry
+</h3>
+
+<p>
+
+Study atomic structure, chemical reactions,
+acids and bases, organic chemistry,
+and practical Chemistry.
+
+</p>
+
+<a href="chemistry.html"
+class="button">
+
+Open Chemistry
+
+</a>
+
+</div>
+
+
+<!-- MATHEMATICS -->
+
+<div class="subject-card">
+
+<h3>
+➗ Mathematics
+</h3>
+
+<p>
+
+Practice algebra, geometry, statistics,
+trigonometry, mensuration, and number operations.
+
+</p>
+
+<a href="mathematics.html"
+class="button">
+
+Open Mathematics
+
+</a>
+
+</div>
+
+
+<!-- PHYSICS -->
+
+<div class="subject-card">
+
+<h3>
+⚡ Physics
+</h3>
+
+<p>
+
+Explore mechanics, electricity, heat,
+waves, magnetism, and light.
+
+</p>
+
+<a href="physics.html"
+class="button">
+
+Open Physics
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- RESOURCE NOTICE -->
+
+<section class="notice">
+
+<h2>
+More Resources Coming Soon
+</h2>
+
+<p>
+
+The SOI Resource Centre will continue to grow
+with more notes, past examination papers,
+revision questions, project guides, videos,
+and interactive learning materials.
+
+</p>
+
+<a href="contact.html"
+class="button">
+
+Suggest a Resource
+
+</a>
 
 </section>
 
@@ -474,18 +755,18 @@
 
 <footer>
 
-    <p>
-        &copy; 2026 Source of Information.
-        All Rights Reserved.
-    </p>
+<p>
+&copy; 2026 Source of Information.
+All Rights Reserved.
+</p>
 
-    <p>
-        Education • Science • Technology • Innovation
-    </p>
+<p>
+Education • Science • Technology • Innovation
+</p>
 
-    <p>
-        Empowering Learners Through Information
-    </p>
+<p>
+Empowering Learners Through Information
+</p>
 
 </footer>
 
