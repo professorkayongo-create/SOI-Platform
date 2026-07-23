@@ -407,11 +407,146 @@ Education • Science • Technology • Innovation
 </footer>
 
 
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase-config.js"></script>
+
+
 <script>
+
+const supabaseClient =
+    supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
 
 document
 .getElementById("registerForm")
-.addEventListener("submit", function(event) {
+.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+
+    const fullName =
+        document.getElementById("fullname").value.trim();
+
+
+    const email =
+        document.getElementById("email").value.trim();
+
+
+    const school =
+        document.getElementById("school").value.trim();
+
+
+    const classLevel =
+        document.getElementById("level").value;
+
+
+    const password =
+        document.getElementById("password").value;
+
+
+    const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+
+    /* CHECK PASSWORDS */
+
+    if (password !== confirmPassword) {
+
+        alert("Passwords do not match.");
+
+        return;
+
+    }
+
+
+    /* CREATE ACCOUNT */
+
+    const {
+        data,
+        error
+    } = await supabaseClient.auth.signUp({
+
+        email: email,
+
+        password: password
+
+    });
+
+
+    /* CHECK FOR ERROR */
+
+    if (error) {
+
+        alert(
+            "Registration failed: "
+            + error.message
+        );
+
+        return;
+
+    }
+
+
+    /* SAVE PROFILE */
+
+    if (data.user) {
+
+        const {
+            error: profileError
+        } = await supabaseClient
+        .from("student_profiles")
+        .insert({
+
+            id: data.user.id,
+
+            full_name: fullName,
+
+            email: email,
+
+            school: school,
+
+            class_level: classLevel
+
+        });
+
+
+        if (profileError) {
+
+            alert(
+                "Account created, but profile could not be saved: "
+                + profileError.message
+            );
+
+            return;
+
+        }
+
+    }
+
+
+    alert(
+        "Registration successful! Please check your email to verify your account."
+    );
+
+
+    document
+    .getElementById("registerForm")
+    .reset();
+
+
+    window.location.href =
+        "login.html";
+
+
+});
+
+</script>
 
 event.preventDefault();
 
