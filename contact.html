@@ -4,7 +4,762 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Source of Information</title>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Contact SOI | Source of Information
+</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background-color: #0b3d62;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #062b45;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* INTRO */
+
+.intro {
+    background-color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.intro h2 {
+    color: #0b3d62;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* CONTACT AREA */
+
+.contact-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    background-color: #0b3d62;
+    color: white;
+    width: 350px;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* FORM */
+
+.contact-form {
+    background-color: white;
+    width: 600px;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    color: #0b3d62;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* BUTTON */
+
+.button {
+    background-color: #0b3d62;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #062b45;
+}
+
+/* SUCCESS MESSAGE */
+
+#successMessage {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eaf2f7;
+    border-left: 4px solid #0b3d62;
+}
+
+/* FAQ */
+
+.faq {
+    background-color: #eaf2f7;
+    padding: 50px 20px;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #0b3d62;
+    margin-bottom: 30px;
+}
+
+.faq-box {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.faq-box h3 {
+    color: #0b3d62;
+    margin-top: 20px;
+}
+
+.faq-box h3:first-child {
+    margin-top: 0;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #062b45;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 90%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>
+Contact Source of Information
+</h1>
+
+<p>
+We are here to connect, support, and learn together.
+</p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="biology.html">
+Biology
+</a>
+
+<a href="chemistry.html">
+Chemistry
+</a>
+
+<a href="mathematics.html">
+Mathematics
+</a>
+
+<a href="physics.html">
+Physics
+</a>
+
+<a href="resources.html">
+Resources
+</a>
+
+<a href="innovation.html">
+Innovation
+</a>
+
+<a href="committee.html">
+Committee
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
+
+
+<!-- INTRODUCTION -->
+
+<section class="intro">
+
+<h2>
+Get in Touch With SOI
+</h2>
+
+<p>
+
+Do you have a question, an innovative idea,
+a science project, or feedback about the
+Source of Information platform?
+
+Complete the form below and share your message.
+
+</p>
+
+</section>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="contact-section">
+
+<div class="contact-grid">
+
+
+<!-- CONTACT INFORMATION -->
+
+<div class="contact-info">
+
+<h2>
+Contact Information
+</h2>
+
+<p>
+
+You can use the contact form to communicate
+with the SOI team.
+
+</p>
+
+<h3>
+📧 Email
+</h3>
+
+<p>
+Add your official SOI email here.
+</p>
+
+<h3>
+🏫 School
+</h3>
+
+<p>
+Source of Information
+</p>
+
+<h3>
+🌍 Location
+</h3>
+
+<p>
+Uganda
+</p>
+
+<h3>
+💡 Innovation
+</h3>
+
+<p>
+
+Have a new idea? Share it with us and
+help create solutions for the future.
+
+</p>
+
+</div>
+
+
+<!-- CONTACT FORM -->
+
+<div class="contact-form">
+
+<h2>
+Send Us a Message
+</h2>
+
+<form id="contactForm">
+
+
+<!-- NAME -->
+
+<div class="form-group">
+
+<label for="name">
+Full Name
+</label>
+
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+
+<!-- EMAIL -->
+
+<div class="form-group">
+
+<label for="email">
+Email Address
+</label>
+
+<input
+type="email"
+id="email"
+name="email"
+placeholder="Enter your email address"
+required>
+
+</div>
+
+
+<!-- SCHOOL -->
+
+<div class="form-group">
+
+<label for="school">
+School / Institution
+</label>
+
+<input
+type="text"
+id="school"
+name="school"
+placeholder="Enter your school or institution"
+required>
+
+</div>
+
+
+<!-- CLASS -->
+
+<div class="form-group">
+
+<label for="class">
+Class / Level
+</label>
+
+<select
+id="class"
+name="class"
+required>
+
+<option value="">
+Select your class or level
+</option>
+
+<option>
+S1
+</option>
+
+<option>
+S2
+</option>
+
+<option>
+S3
+</option>
+
+<option>
+S4
+</option>
+
+<option>
+S5
+</option>
+
+<option>
+S6
+</option>
+
+<option>
+University / College
+</option>
+
+<option>
+Teacher
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<!-- REASON -->
+
+<div class="form-group">
+
+<label for="reason">
+Reason for Contact
+</label>
+
+<select
+id="reason"
+name="reason"
+required>
+
+<option value="">
+Select a reason
+</option>
+
+<option>
+Academic Question
+</option>
+
+<option>
+Science Project
+</option>
+
+<option>
+Innovation Idea
+</option>
+
+<option>
+Technology Question
+</option>
+
+<option>
+Committee
+</option>
+
+<option>
+Website Feedback
+</option>
+
+<option>
+General Inquiry
+</option>
+
+</select>
+
+</div>
+
+
+<!-- SUBJECT -->
+
+<div class="form-group">
+
+<label for="subject">
+Subject
+</label>
+
+<input
+type="text"
+id="subject"
+name="subject"
+placeholder="Enter the subject"
+required>
+
+</div>
+
+
+<!-- MESSAGE -->
+
+<div class="form-group">
+
+<label for="message">
+Your Message
+</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="Write your message here..."
+required></textarea>
+
+</div>
+
+
+<!-- SUBMIT -->
+
+<button
+type="submit"
+class="button">
+
+Send Message
+
+</button>
+
+
+</form>
+
+
+<!-- SUCCESS MESSAGE -->
+
+<div id="successMessage">
+
+<strong>
+Thank you!
+</strong>
+
+Your message has been received.
+We will get back to you as soon as possible.
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+
+<div class="faq-box">
+
+
+<h3>
+Can I submit a science project idea?
+</h3>
+
+<p>
+
+Yes. Select "Science Project" or
+"Innovation Idea" in the contact form
+and describe your idea.
+
+</p>
+
+
+<h3>
+Can students contribute to SOI?
+</h3>
+
+<p>
+
+Yes. Students can participate in science,
+technology, innovation, research, and
+educational activities.
+
+</p>
+
+
+<h3>
+Can I ask an academic question?
+</h3>
+
+<p>
+
+Yes. Select "Academic Question" and
+provide details about the topic or
+subject you need help with.
+
+</p>
+
+
+<h3>
+How can I give feedback?
+</h3>
+
+<p>
+
+Select "Website Feedback" and tell us
+how we can improve the SOI platform.
+
+</p>
+
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+&copy; 2026 Source of Information.
+All Rights Reserved.
+</p>
+
+<p>
+Education • Science • Technology • Innovation
+</p>
+
+<p>
+Empowering Learners Through Information
+</p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(event) {
+
+event.preventDefault();
+
+document
+.getElementById("successMessage")
+.style.display = "block";
+
+this.reset();
+
+});
+
+</script>
+
+
+</body>
+
+</html>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
