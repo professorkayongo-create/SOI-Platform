@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Source of Information</title>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0b3d62;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        nav {
+            background: #062b45;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover { color: #ffd700; }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #0b3d62;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: #0b3d62;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #062b45;
+        }
+
+        footer {
+            background: #062b45;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+    <p>We Would Love to Hear From You</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="biology.html">Biology</a>
+    <a href="chemistry.html">Chemistry</a>
+    <a href="mathematics.html">Mathematics</a>
+    <a href="physics.html">Physics</a>
+    <a href="committee.html">Committee</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="contact-box">
+
+        <h2>Get in Touch</h2>
+
+        <form>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="school">School</label>
+            <input type="text" id="school" name="school" placeholder="Enter your school">
+
+            <label for="class">Class</label>
+            <select id="class" name="class">
+                <option value="">Select your class</option>
+                <option>S1</option>
+                <option>S2</option>
+                <option>S3</option>
+                <option>S4</option>
+                <option>S5</option>
+                <option>S6</option>
+            </select>
+
+            <label for="reason">Reason for Contact</label>
+            <select id="reason" name="reason">
+                <option value="">Select a reason</option>
+                <option>General Inquiry</option>
+                <option>Academic Support</option>
+                <option>Science and Technology</option>
+                <option>Partnership</option>
+                <option>Feedback</option>
+                <option>Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"
+                placeholder="Write your message here..."></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Source of Information. All Rights Reserved.</p>
+    <p>Education • Science • Technology • Innovation</p>
+</footer>
+
+</body>
+</html>
