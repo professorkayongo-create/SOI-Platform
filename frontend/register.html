@@ -289,29 +289,17 @@ required>
 Select your class
 </option>
 
-<option>
-S1
-</option>
+<option>S1</option>
 
-<option>
-S2
-</option>
+<option>S2</option>
 
-<option>
-S3
-</option>
+<option>S3</option>
 
-<option>
-S4
-</option>
+<option>S4</option>
 
-<option>
-S5
-</option>
+<option>S5</option>
 
-<option>
-S6
-</option>
+<option>S6</option>
 
 <option>
 University / College
@@ -368,7 +356,7 @@ Create Account
 
 <div id="message">
 
-Registration form submitted successfully!
+Registration successful!
 
 </div>
 
@@ -431,34 +419,51 @@ document
 
 
     const fullName =
-        document.getElementById("fullname").value.trim();
+        document
+        .getElementById("fullname")
+        .value
+        .trim();
 
 
     const email =
-        document.getElementById("email").value.trim();
+        document
+        .getElementById("email")
+        .value
+        .trim();
 
 
     const school =
-        document.getElementById("school").value.trim();
+        document
+        .getElementById("school")
+        .value
+        .trim();
 
 
     const classLevel =
-        document.getElementById("level").value;
+        document
+        .getElementById("level")
+        .value;
 
 
     const password =
-        document.getElementById("password").value;
+        document
+        .getElementById("password")
+        .value;
 
 
     const confirmPassword =
-        document.getElementById("confirmPassword").value;
+        document
+        .getElementById("confirmPassword")
+        .value;
 
 
     /* CHECK PASSWORDS */
 
     if (password !== confirmPassword) {
 
-        alert("Passwords do not match.");
+        alert(
+            "Passwords do not match."
+        );
 
         return;
 
@@ -543,37 +548,6 @@ document
     window.location.href =
         "login.html";
 
-
-});
-
-</script>
-
-event.preventDefault();
-
-
-let password =
-document.getElementById("password").value;
-
-
-let confirmPassword =
-document.getElementById("confirmPassword").value;
-
-
-if (password !== confirmPassword) {
-
-alert("Passwords do not match.");
-
-return;
-
-}
-
-
-document
-.getElementById("message")
-.style.display = "block";
-
-
-this.reset();
 
 });
 
