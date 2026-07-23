@@ -1,158 +1,983 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics | Source of Information</title>
 
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f8fb;
-            color: #222;
-            line-height: 1.6;
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #0b3d62;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
+<title>
+Physics Learning Centre | SOI
+</title>
 
-        nav {
-            background: #062b45;
-            padding: 12px;
-            text-align: center;
-        }
+<style>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav a:hover { color: #ffd700; }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #222;
+    line-height: 1.6;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+/* HEADER */
 
-        .intro, .card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+header {
+    background-color: #0b3d62;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
 
-        .intro {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
 
-        h2, h3 { color: #0b3d62; }
+/* NAVIGATION */
 
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
+nav {
+    background-color: #062b45;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .card { width: 280px; }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+}
 
-        footer {
-            background: #062b45;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
+nav a:hover {
+    color: #ffd700;
+}
 
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 8px;
-            }
+/* INTRO */
 
-            .card { width: 90%; }
-        }
-    </style>
+.intro {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h2 {
+    color: #0b3d62;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* TOPICS */
+
+.topics {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.topics h2 {
+    color: #0b3d62;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.topic-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.topic-card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.topic-card h3 {
+    color: #0b3d62;
+    margin-bottom: 12px;
+}
+
+.topic-card ul {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.topic-card li {
+    margin-bottom: 8px;
+}
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: #0b3d62;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #062b45;
+}
+
+/* NOTES */
+
+.notes {
+    background-color: #eaf2f7;
+    padding: 50px 20px;
+}
+
+.notes-box {
+    background-color: white;
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.notes-box h3 {
+    color: #0b3d62;
+    margin-bottom: 15px;
+}
+
+.notes-box h4 {
+    color: #0b3d62;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.formula {
+    background-color: #f4f8fb;
+    padding: 15px;
+    margin-top: 10px;
+    border-left: 4px solid #0b3d62;
+    font-weight: bold;
+}
+
+/* REVISION */
+
+.revision {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.revision h2 {
+    color: #0b3d62;
+    margin-bottom: 15px;
+}
+
+.revision p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #062b45;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .topic-card {
+        width: 90%;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
-    <h1>Physics</h1>
-    <p>Understanding the Laws of the Physical World</p>
+
+<h1>
+Physics Learning Centre
+</h1>
+
+<p>
+Explore Forces • Understand Energy • Discover the Physical World
+</p>
+
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="biology.html">Biology</a>
-    <a href="chemistry.html">Chemistry</a>
-    <a href="mathematics.html">Mathematics</a>
-    <a href="physics.html">Physics</a>
-    <a href="committee.html">Committee</a>
-    <a href="contact.html">Contact</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="biology.html">
+Biology
+</a>
+
+<a href="chemistry.html">
+Chemistry
+</a>
+
+<a href="mathematics.html">
+Mathematics
+</a>
+
+<a href="physics.html">
+Physics
+</a>
+
+<a href="resources.html">
+Resources
+</a>
+
+<a href="committee.html">
+Committee
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
 </nav>
 
-<div class="container">
 
-    <div class="intro">
-        <h2>Welcome to Physics</h2>
-        <p>
-            Explore forces, motion, energy, electricity, waves,
-            heat, light, and other principles that explain our physical world.
-        </p>
-    </div>
+<!-- INTRODUCTION -->
 
-    <div class="cards">
+<section class="intro">
 
-        <div class="card">
-            <h3>Mechanics</h3>
-            <p>Study motion, forces, momentum, work, energy, and power.</p>
-        </div>
+<h2>
+Welcome to Physics
+</h2>
 
-        <div class="card">
-            <h3>Electricity</h3>
-            <p>Learn about electric circuits, current, voltage, resistance, and electrical power.</p>
-        </div>
+<p>
 
-        <div class="card">
-            <h3>Waves</h3>
-            <p>Explore sound, light, wave properties, reflection, refraction, and diffraction.</p>
-        </div>
+Physics is the study of matter, energy, forces,
+motion, and the interactions that govern the
+physical world. Explore the topics below to
+develop your understanding of Physics.
 
-        <div class="card">
-            <h3>Heat</h3>
-            <p>Understand temperature, thermal energy, expansion, and heat transfer.</p>
-        </div>
+</p>
 
-        <div class="card">
-            <h3>Magnetism</h3>
-            <p>Learn about magnets, magnetic fields, electromagnetism, and applications.</p>
-        </div>
+</section>
 
-        <div class="card">
-            <h3>Revision</h3>
-            <p>Practice Physics calculations, concepts, and examination questions.</p>
-        </div>
 
-    </div>
+<!-- TOPICS -->
+
+<section class="topics">
+
+<h2>
+Explore Physics Topics
+</h2>
+
+
+<div class="topic-grid">
+
+
+<!-- MECHANICS -->
+
+<div class="topic-card">
+
+<h3>
+⚙️ Mechanics
+</h3>
+
+<p>
+Study motion, forces, and the behavior of objects.
+</p>
+
+<ul>
+
+<li>
+Motion
+</li>
+
+<li>
+Speed and velocity
+</li>
+
+<li>
+Acceleration
+</li>
+
+<li>
+Force
+</li>
+
+<li>
+Work and energy
+</li>
+
+</ul>
+
+<a href="#mechanics-notes"
+class="button">
+
+View Notes
+
+</a>
 
 </div>
 
+
+<!-- HEAT -->
+
+<div class="topic-card">
+
+<h3>
+🌡️ Heat & Temperature
+</h3>
+
+<p>
+Explore thermal energy and temperature changes.
+</p>
+
+<ul>
+
+<li>
+Temperature
+</li>
+
+<li>
+Heat transfer
+</li>
+
+<li>
+Conduction
+</li>
+
+<li>
+Convection
+</li>
+
+<li>
+Radiation
+</li>
+
+</ul>
+
+<a href="#heat-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+<!-- WAVES -->
+
+<div class="topic-card">
+
+<h3>
+🌊 Waves
+</h3>
+
+<p>
+Study how energy travels through waves.
+</p>
+
+<ul>
+
+<li>
+Wave motion
+</li>
+
+<li>
+Frequency
+</li>
+
+<li>
+Wavelength
+</li>
+
+<li>
+Amplitude
+</li>
+
+<li>
+Sound waves
+</li>
+
+</ul>
+
+<a href="#waves-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+<!-- ELECTRICITY -->
+
+<div class="topic-card">
+
+<h3>
+⚡ Electricity
+</h3>
+
+<p>
+Understand electric charge, current, and circuits.
+</p>
+
+<ul>
+
+<li>
+Electric current
+</li>
+
+<li>
+Voltage
+</li>
+
+<li>
+Resistance
+</li>
+
+<li>
+Ohm's law
+</li>
+
+<li>
+Electrical circuits
+</li>
+
+</ul>
+
+<a href="#electricity-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+<!-- MAGNETISM -->
+
+<div class="topic-card">
+
+<h3>
+🧲 Magnetism
+</h3>
+
+<p>
+Explore magnets, magnetic fields, and electromagnetism.
+</p>
+
+<ul>
+
+<li>
+Magnetic fields
+</li>
+
+<li>
+Permanent magnets
+</li>
+
+<li>
+Electromagnets
+</li>
+
+<li>
+Electromagnetic induction
+</li>
+
+<li>
+Motors and generators
+</li>
+
+</ul>
+
+<a href="#magnetism-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+<!-- LIGHT -->
+
+<div class="topic-card">
+
+<h3>
+💡 Light & Optics
+</h3>
+
+<p>
+Study the behavior and properties of light.
+</p>
+
+<ul>
+
+<li>
+Reflection
+</li>
+
+<li>
+Refraction
+</li>
+
+<li>
+Lenses
+</li>
+
+<li>
+Mirrors
+</li>
+
+<li>
+Optical instruments
+</li>
+
+</ul>
+
+<a href="#light-notes"
+class="button">
+
+View Notes
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- MECHANICS NOTES -->
+
+<section class="notes"
+id="mechanics-notes">
+
+<div class="notes-box">
+
+<h3>
+Mechanics — Introduction
+</h3>
+
+<p>
+
+Mechanics is the branch of Physics concerned
+with the motion of objects and the forces acting
+on them.
+
+</p>
+
+<h4>
+Speed
+
+</h4>
+
+<div class="formula">
+
+Speed = Distance ÷ Time
+
+</div>
+
+<h4>
+Acceleration
+
+</h4>
+
+<div class="formula">
+
+Acceleration = Change in Velocity ÷ Time
+
+</div>
+
+<h4>
+Newton's Second Law
+
+</h4>
+
+<div class="formula">
+
+F = ma
+
+</div>
+
+<p>
+
+Where F is force, m is mass, and a is acceleration.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- HEAT NOTES -->
+
+<section class="notes"
+id="heat-notes">
+
+<div class="notes-box">
+
+<h3>
+Heat & Temperature — Introduction
+</h3>
+
+<p>
+
+Heat is energy transferred from a hotter object
+to a colder object because of a temperature difference.
+
+</p>
+
+<h4>
+Methods of Heat Transfer
+
+</h4>
+
+<p>
+
+The three main methods are conduction, convection,
+and radiation.
+
+</p>
+
+<h4>
+Specific Heat Capacity
+
+</h4>
+
+<div class="formula">
+
+Q = mcΔT
+
+</div>
+
+<p>
+
+Where Q is heat energy, m is mass,
+c is specific heat capacity, and ΔT is
+the change in temperature.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- WAVES NOTES -->
+
+<section class="notes"
+id="waves-notes">
+
+<div class="notes-box">
+
+<h3>
+Waves — Introduction
+</h3>
+
+<p>
+
+A wave is a disturbance that transfers energy
+from one place to another.
+
+</p>
+
+<h4>
+Wave Equation
+
+</h4>
+
+<div class="formula">
+
+v = fλ
+
+</div>
+
+<p>
+
+Where v is wave speed, f is frequency,
+and λ is wavelength.
+
+</p>
+
+<h4>
+Examples of Waves
+
+</h4>
+
+<p>
+
+Examples include sound waves, water waves,
+light waves, radio waves, and other electromagnetic waves.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ELECTRICITY NOTES -->
+
+<section class="notes"
+id="electricity-notes">
+
+<div class="notes-box">
+
+<h3>
+Electricity — Introduction
+</h3>
+
+<p>
+
+Electricity involves the movement and interaction
+of electric charges.
+
+</p>
+
+<h4>
+Ohm's Law
+
+</h4>
+
+<div class="formula">
+
+V = IR
+
+</div>
+
+<p>
+
+Where V is voltage, I is current,
+and R is resistance.
+
+</p>
+
+<h4>
+Electrical Power
+
+</h4>
+
+<div class="formula">
+
+P = VI
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MAGNETISM NOTES -->
+
+<section class="notes"
+id="magnetism-notes">
+
+<div class="notes-box">
+
+<h3>
+Magnetism — Introduction
+</h3>
+
+<p>
+
+Magnetism is a force associated with magnetic
+fields produced by magnets and moving electric charges.
+
+</p>
+
+<h4>
+Electromagnets
+
+</h4>
+
+<p>
+
+An electromagnet is a temporary magnet produced
+when electric current flows through a coil of wire.
+
+</p>
+
+<h4>
+Applications
+
+</h4>
+
+<p>
+
+Electromagnets are used in electric motors,
+generators, loudspeakers, relays, and lifting machines.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- LIGHT NOTES -->
+
+<section class="notes"
+id="light-notes">
+
+<div class="notes-box">
+
+<h3>
+Light & Optics — Introduction
+</h3>
+
+<p>
+
+Optics is the study of light and its behavior.
+
+</p>
+
+<h4>
+Reflection
+
+</h4>
+
+<p>
+
+Reflection occurs when light strikes a surface
+and changes direction.
+
+</p>
+
+<h4>
+Refraction
+
+</h4>
+
+<p>
+
+Refraction is the change in direction of light
+when it passes from one medium to another.
+
+</p>
+
+<h4>
+Lenses
+
+</h4>
+
+<p>
+
+Convex and concave lenses are used in optical
+devices such as cameras, microscopes, and spectacles.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="revision">
+
+<h2>
+Physics Revision
+</h2>
+
+<p>
+
+Regular practice is one of the best ways to improve
+your Physics skills. Work through calculations,
+understand formulas, and apply concepts to real-life
+situations.
+
+More Physics revision questions and solutions
+will be added to the SOI platform.
+
+</p>
+
+<a href="resources.html"
+class="button">
+
+Back to Resources
+
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
 <footer>
-    <p>&copy; 2026 Source of Information. All Rights Reserved.</p>
-    <p>Education • Science • Technology • Innovation</p>
+
+<p>
+&copy; 2026 Source of Information.
+All Rights Reserved.
+</p>
+
+<p>
+Education • Science • Technology • Innovation
+</p>
+
+<p>
+Empowering Learners Through Information
+</p>
+
 </footer>
 
+
 </body>
+
 </html>
