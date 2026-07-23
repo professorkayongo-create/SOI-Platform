@@ -1,197 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Committee | Source of Information</title>
 
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f8fb;
-            color: #222;
-            line-height: 1.6;
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #0b3d62;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
+<title>
+SOI Committee | Source of Information
+</title>
 
-        nav {
-            background: #062b45;
-            padding: 12px;
-            text-align: center;
-        }
+<style>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav a:hover { color: #ffd700; }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #222;
+    line-height: 1.6;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+/* HEADER */
 
-        .intro {
-            background: white;
-            padding: 30px;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+header {
+    background-color: #0b3d62;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        .members {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
 
-        .member {
-            background: white;
-            width: 280px;
-            padding: 25px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+/* NAVIGATION */
 
-        .member h3 {
-            color: #0b3d62;
-            margin-bottom: 8px;
-        }
+nav {
+    background-color: #062b45;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .role {
-            font-weight: bold;
-            color: #555;
-            margin-bottom: 10px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+}
 
-        footer {
-            background: #062b45;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
+nav a:hover {
+    color: #ffd700;
+}
 
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 8px;
-            }
+/* INTRO */
 
-            .member { width: 90%; }
-        }
-    </style>
+.intro {
+    background-color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.intro h2 {
+    color: #0b3d62;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* COMMITTEE */
+
+.committee {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.committee h2 {
+    text-align: center;
+    color: #0b3d62;
+    margin-bottom: 35px;
+}
+
+/* GRID */
+
+.member-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* MEMBER CARD */
+
+.member-card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.member-card h3 {
+    color: #0b3d62;
+    margin-bottom: 8px;
+}
+
+.position {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.member-card p {
+    font-size: 15px;
+}
+
+/* RESPONSIBILITIES */
+
+.responsibilities {
+    background-color: #eaf2f7;
+    padding: 50px 20px;
+}
+
+.responsibilities h2 {
+    text-align: center;
+    color: #0b3d62;
+    margin-bottom: 30px;
+}
+
+.responsibility-box {
+    max-width: 850px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.responsibility-box h3 {
+    color: #0b3d62;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.responsibility-box h3:first-child {
+    margin-top: 0;
+}
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 11px 20px;
+    background-color: #0b3d62;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #062b45;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #062b45;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .member-card {
+        width: 90%;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
-    <h1>SOI Committee</h1>
-    <p>Leadership • Teamwork • Innovation</p>
+
+<h1>
+SOI Committee
+</h1>
+
+<p>
+Leadership • Service • Innovation • Excellence
+</p>
+
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="biology.html">Biology</a>
-    <a href="chemistry.html">Chemistry</a>
-    <a href="mathematics.html">Mathematics</a>
-    <a href="physics.html">Physics</a>
-    <a href="committee.html">Committee</a>
-    <a href="contact.html">Contact</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="biology.html">
+Biology
+</a>
+
+<a href="chemistry.html">
+Chemistry
+</a>
+
+<a href="mathematics.html">
+Mathematics
+</a>
+
+<a href="physics.html">
+Physics
+</a>
+
+<a href="resources.html">
+Resources
+</a>
+
+<a href="innovation.html">
+Innovation
+</a>
+
+<a href="committee.html">
+Committee
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
 </nav>
 
-<div class="container">
 
-    <div class="intro">
-        <h2>Meet the SOI Committee</h2>
+<!-- INTRODUCTION -->
 
-        <p>
-            The SOI Committee is responsible for coordinating,
-            managing, and supporting the activities of the Source
-            of Information Platform.
-        </p>
-    </div>
+<section class="intro">
 
-    <div class="members">
+<h2>
+Meet the SOI Committee
+</h2>
 
-        <div class="member">
-            <h3>Professor Kayongo Musa</h3>
-            <p class="role">Founder / Director</p>
-            <p>
-                Provides overall leadership, strategic direction,
-                and supervision of the SOI Platform.
-            </p>
-        </div>
+<p>
 
-        <div class="member">
-            <h3>Committee Chairperson</h3>
-            <p class="role">Leadership</p>
-            <p>
-                Coordinates committee activities and ensures that
-                planned activities are successfully implemented.
-            </p>
-        </div>
+The SOI Committee supports the development of
+the platform by coordinating educational activities,
+science and technology projects, student participation,
+innovation, and access to learning resources.
 
-        <div class="member">
-            <h3>Academic Coordinator</h3>
-            <p class="role">Academic Affairs</p>
-            <p>
-                Coordinates academic content, learning resources,
-                and subject-related activities.
-            </p>
-        </div>
+</p>
 
-        <div class="member">
-            <h3>Technology Coordinator</h3>
-            <p class="role">Technology & Innovation</p>
-            <p>
-                Manages digital systems, technology projects,
-                and technological development of the platform.
-            </p>
-        </div>
+</section>
 
-        <div class="member">
-            <h3>Content Manager</h3>
-            <p class="role">Content Development</p>
-            <p>
-                Organizes, reviews, and updates educational content
-                published on the platform.
-            </p>
-        </div>
 
-        <div class="member">
-            <h3>Communications Officer</h3>
-            <p class="role">Communication</p>
-            <p>
-                Manages communication, announcements, and engagement
-                with students and other platform users.
-            </p>
-        </div>
+<!-- COMMITTEE MEMBERS -->
 
-    </div>
+<section class="committee">
+
+<h2>
+Committee Leadership
+</h2>
+
+
+<div class="member-grid">
+
+
+<!-- CHAIRPERSON -->
+
+<div class="member-card">
+
+<h3>
+Chairperson
+</h3>
+
+<p class="position">
+Committee Leader
+</p>
+
+<p>
+
+Provides overall leadership and direction for
+the SOI platform and coordinates major activities
+and initiatives.
+
+</p>
 
 </div>
 
+
+<!-- VICE CHAIRPERSON -->
+
+<div class="member-card">
+
+<h3>
+Vice Chairperson
+</h3>
+
+<p class="position">
+Deputy Committee Leader
+</p>
+
+<p>
+
+Supports the Chairperson and helps coordinate
+committee activities and projects.
+
+</p>
+
+</div>
+
+
+<!-- SECRETARY -->
+
+<div class="member-card">
+
+<h3>
+Secretary
+</h3>
+
+<p class="position">
+Administration & Records
+</p>
+
+<p>
+
+Maintains committee records, prepares meeting
+minutes, manages communication, and organizes
+important documents.
+
+</p>
+
+</div>
+
+
+<!-- TREASURER -->
+
+<div class="member-card">
+
+<h3>
+Treasurer
+</h3>
+
+<p class="position">
+Finance & Resources
+</p>
+
+<p>
+
+Manages financial records, budgets, fundraising
+activities, and responsible use of project resources.
+
+</p>
+
+</div>
+
+
+<!-- ICT OFFICER -->
+
+<div class="member-card">
+
+<h3>
+ICT & Technology Officer
+</h3>
+
+<p class="position">
+Digital Platform Management
+</p>
+
+<p>
+
+Supports website development, digital tools,
+technology projects, and technical operations
+of the SOI platform.
+
+</p>
+
+</div>
+
+
+<!-- SCIENCE COORDINATOR -->
+
+<div class="member-card">
+
+<h3>
+Science Coordinator
+</h3>
+
+<p class="position">
+Science Education & Projects
+</p>
+
+<p>
+
+Coordinates science learning activities,
+experiments, academic resources, and science
+projects.
+
+</p>
+
+</div>
+
+
+<!-- INNOVATION OFFICER -->
+
+<div class="member-card">
+
+<h3>
+Innovation Officer
+</h3>
+
+<p class="position">
+Innovation & Research
+</p>
+
+<p>
+
+Encourages creative problem-solving, research,
+student inventions, and innovative solutions
+to community challenges.
+
+</p>
+
+</div>
+
+
+<!-- COMMUNICATION OFFICER -->
+
+<div class="member-card">
+
+<h3>
+Communication Officer
+</h3>
+
+<p class="position">
+Public Relations & Outreach
+</p>
+
+<p>
+
+Manages communication, announcements, outreach,
+and information sharing with students and the
+wider community.
+
+</p>
+
+</div>
+
+
+<!-- MEMBER -->
+
+<div class="member-card">
+
+<h3>
+General Committee Member
+</h3>
+
+<p class="position">
+Student Support & Participation
+</p>
+
+<p>
+
+Participates in committee activities and supports
+the implementation of SOI programs and projects.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- RESPONSIBILITIES -->
+
+<section class="responsibilities">
+
+<h2>
+Committee Responsibilities
+</h2>
+
+
+<div class="responsibility-box">
+
+
+<h3>
+1. Leadership and Coordination
+</h3>
+
+<p>
+
+Provide effective leadership and coordinate
+the activities and development of the SOI platform.
+
+</p>
+
+
+<h3>
+2. Academic Support
+</h3>
+
+<p>
+
+Promote access to quality learning materials
+and support students in Biology, Chemistry,
+Mathematics, Physics, and other academic areas.
+
+</p>
+
+
+<h3>
+3. Science and Technology
+</h3>
+
+<p>
+
+Encourage students to participate in science,
+technology, engineering, and mathematics activities.
+
+</p>
+
+
+<h3>
+4. Innovation and Research
+</h3>
+
+<p>
+
+Support students in developing innovative ideas,
+conducting research, and creating solutions
+to real-world problems.
+
+</p>
+
+
+<h3>
+5. Digital Platform Management
+</h3>
+
+<p>
+
+Maintain and improve the SOI digital platform
+and promote responsible use of technology.
+
+</p>
+
+
+<h3>
+6. Community Engagement
+</h3>
+
+<p>
+
+Connect students and communities through
+educational activities, outreach programs,
+and information sharing.
+
+</p>
+
+
+<h3>
+7. Project Development
+</h3>
+
+<p>
+
+Identify, develop, and support practical projects
+that contribute to education, technology,
+environmental sustainability, and community development.
+
+</p>
+
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="intro">
+
+<h2>
+Want to Join or Contact the Committee?
+</h2>
+
+<p>
+
+If you have an idea, project, question, or would
+like to participate in SOI activities, contact
+the committee through the contact page.
+
+</p>
+
+<a href="contact.html"
+class="button">
+
+Contact SOI
+
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
 <footer>
-    <p>&copy; 2026 Source of Information. All Rights Reserved.</p>
-    <p>Education • Science • Technology • Innovation</p>
+
+<p>
+&copy; 2026 Source of Information.
+All Rights Reserved.
+</p>
+
+<p>
+Education • Science • Technology • Innovation
+</p>
+
+<p>
+Empowering Learners Through Information
+</p>
+
 </footer>
 
+
 </body>
+
 </html>
