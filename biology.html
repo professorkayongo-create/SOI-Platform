@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Biology | Source of Information</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Biology Learning Centre | SOI
+    </title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -20,21 +27,29 @@
             line-height: 1.6;
         }
 
+        /* HEADER */
+
         header {
             background-color: #0b3d62;
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 35px 20px;
         }
 
         header h1 {
-            font-size: 32px;
+            font-size: 36px;
+            margin-bottom: 8px;
         }
+
+        /* NAVIGATION */
 
         nav {
             background-color: #062b45;
-            padding: 12px;
+            padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -42,196 +57,808 @@
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
+            display: inline-block;
         }
 
         nav a:hover {
             color: #ffd700;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+        /* INTRO */
 
         .intro {
             background-color: white;
-            padding: 30px;
             text-align: center;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 50px 20px;
         }
 
         .intro h2 {
             color: #0b3d62;
             margin-bottom: 15px;
+            font-size: 30px;
         }
 
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* TOPICS */
+
         .topics {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .topics h2 {
+            color: #0b3d62;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .topic-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
         }
 
-        .card {
+        .topic-card {
             background-color: white;
-            width: 280px;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
         }
 
-        .card h3 {
+        .topic-card h3 {
             color: #0b3d62;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .card a {
-            display: inline-block;
+        .topic-card ul {
+            margin-left: 20px;
             margin-top: 15px;
-            color: #0b3d62;
-            font-weight: bold;
-            text-decoration: none;
         }
 
-        .card a:hover {
-            color: #ffd700;
+        .topic-card li {
+            margin-bottom: 8px;
         }
+
+        /* BUTTON */
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 18px;
+            background-color: #0b3d62;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #062b45;
+        }
+
+        /* FEATURED NOTES */
+
+        .notes {
+            background-color: #eaf2f7;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .notes h2 {
+            color: #0b3d62;
+            margin-bottom: 20px;
+        }
+
+        .notes-box {
+            background-color: white;
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .notes-box h3 {
+            color: #0b3d62;
+            margin-bottom: 15px;
+        }
+
+        /* REVISION */
+
+        .revision {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .revision h2 {
+            color: #0b3d62;
+            margin-bottom: 15px;
+        }
+
+        .revision p {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* FOOTER */
 
         footer {
             background-color: #062b45;
             color: white;
             text-align: center;
-            padding: 25px;
-            margin-top: 30px;
+            padding: 30px 20px;
         }
 
-        @media (max-width: 600px) {
+        footer p {
+            margin: 5px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
             nav a {
                 display: block;
-                margin: 8px 0;
+                margin: 8px;
             }
 
-            .card {
+            .topic-card {
                 width: 90%;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <header>
-        <h1>Biology</h1>
-        <p>Explore the Science of Life</p>
-    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="biology.html">Biology</a>
-        <a href="chemistry.html">Chemistry</a>
-        <a href="mathematics.html">Mathematics</a>
-        <a href="physics.html">Physics</a>
-        <a href="committee.html">Committee</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- HEADER -->
 
-    <div class="container">
+<header>
 
-        <div class="intro">
-            <h2>Welcome to the Biology Section</h2>
+    <h1>
+        Biology Learning Centre
+    </h1>
+
+    <p>
+        Explore Life • Understand Science • Discover Nature
+    </p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+    <a href="biology.html">
+        Biology
+    </a>
+
+    <a href="chemistry.html">
+        Chemistry
+    </a>
+
+    <a href="mathematics.html">
+        Mathematics
+    </a>
+
+    <a href="physics.html">
+        Physics
+    </a>
+
+    <a href="resources.html">
+        Resources
+    </a>
+
+    <a href="committee.html">
+        Committee
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+</nav>
+
+
+<!-- INTRODUCTION -->
+
+<section class="intro">
+
+    <h2>
+        Welcome to Biology
+    </h2>
+
+    <p>
+
+        Biology is the study of living organisms and
+        their interactions with each other and the environment.
+        Explore the topics below to develop your understanding
+        of life sciences.
+
+    </p>
+
+</section>
+
+
+<!-- TOPICS -->
+
+<section class="topics">
+
+    <h2>
+        Explore Biology Topics
+    </h2>
+
+
+    <div class="topic-grid">
+
+
+        <!-- CELL BIOLOGY -->
+
+        <div class="topic-card">
+
+            <h3>
+                🧬 Cell Biology
+            </h3>
 
             <p>
-                Discover the fascinating world of living organisms.
-                This section provides learners with Biology concepts,
-                revision materials, scientific knowledge, and resources
-                to support academic success.
+                Learn about the basic unit of life:
+                the cell.
             </p>
-        </div>
 
-        <div class="topics">
+            <ul>
 
-            <div class="card">
-                <h3>Cell Biology</h3>
+                <li>
+                    Cell structure
+                </li>
 
-                <p>
-                    Learn about cells, cell structures, functions,
-                    cell division, and the differences between plant
-                    and animal cells.
-                </p>
+                <li>
+                    Plant and animal cells
+                </li>
 
-                <a href="#">View Topics →</a>
-            </div>
+                <li>
+                    Cell organelles
+                </li>
 
-            <div class="card">
-                <h3>Human Biology</h3>
+                <li>
+                    Cell division
+                </li>
 
-                <p>
-                    Explore the human body, nutrition, digestion,
-                    respiration, circulation, excretion, and
-                    reproduction.
-                </p>
+                <li>
+                    Transport across membranes
+                </li>
 
-                <a href="#">View Topics →</a>
-            </div>
+            </ul>
 
-            <div class="card">
-                <h3>Ecology</h3>
+            <a href="#cell-notes"
+               class="button">
 
-                <p>
-                    Study ecosystems, food chains, food webs,
-                    populations, communities, and the interaction
-                    between organisms and their environment.
-                </p>
+                View Notes
 
-                <a href="#">View Topics →</a>
-            </div>
-
-            <div class="card">
-                <h3>Genetics</h3>
-
-                <p>
-                    Learn about genes, chromosomes, inheritance,
-                    variation, mutations, and genetic characteristics.
-                </p>
-
-                <a href="#">View Topics →</a>
-            </div>
-
-            <div class="card">
-                <h3>Plant Biology</h3>
-
-                <p>
-                    Explore photosynthesis, plant nutrition,
-                    transport systems, transpiration, and plant
-                    reproduction.
-                </p>
-
-                <a href="#">View Topics →</a>
-            </div>
-
-            <div class="card">
-                <h3>Revision Questions</h3>
-
-                <p>
-                    Practice Biology questions and prepare yourself
-                    for school examinations and science competitions.
-                </p>
-
-                <a href="#">Practice Questions →</a>
-            </div>
+            </a>
 
         </div>
+
+
+        <!-- HUMAN BIOLOGY -->
+
+        <div class="topic-card">
+
+            <h3>
+                🫀 Human Biology
+            </h3>
+
+            <p>
+                Explore the structure and functions
+                of the human body.
+            </p>
+
+            <ul>
+
+                <li>
+                    Nutrition
+                </li>
+
+                <li>
+                    Digestion
+                </li>
+
+                <li>
+                    Respiration
+                </li>
+
+                <li>
+                    Circulation
+                </li>
+
+                <li>
+                    Excretion
+                </li>
+
+            </ul>
+
+            <a href="#human-notes"
+               class="button">
+
+                View Notes
+
+            </a>
+
+        </div>
+
+
+        <!-- ECOLOGY -->
+
+        <div class="topic-card">
+
+            <h3>
+                🌍 Ecology
+            </h3>
+
+            <p>
+                Study how organisms interact with
+                one another and their environment.
+            </p>
+
+            <ul>
+
+                <li>
+                    Ecosystems
+                </li>
+
+                <li>
+                    Food chains
+                </li>
+
+                <li>
+                    Food webs
+                </li>
+
+                <li>
+                    Population
+                </li>
+
+                <li>
+                    Conservation
+                </li>
+
+            </ul>
+
+            <a href="#ecology-notes"
+               class="button">
+
+                View Notes
+
+            </a>
+
+        </div>
+
+
+        <!-- GENETICS -->
+
+        <div class="topic-card">
+
+            <h3>
+                🧬 Genetics
+            </h3>
+
+            <p>
+                Learn how characteristics are inherited
+                from parents to offspring.
+            </p>
+
+            <ul>
+
+                <li>
+                    Genes
+                </li>
+
+                <li>
+                    Chromosomes
+                </li>
+
+                <li>
+                    Inheritance
+                </li>
+
+                <li>
+                    Variation
+                </li>
+
+                <li>
+                    Mutations
+                </li>
+
+            </ul>
+
+            <a href="#genetics-notes"
+               class="button">
+
+                View Notes
+
+            </a>
+
+        </div>
+
+
+        <!-- PLANT BIOLOGY -->
+
+        <div class="topic-card">
+
+            <h3>
+                🌱 Plant Biology
+            </h3>
+
+            <p>
+                Explore the structure and functions
+                of plants.
+            </p>
+
+            <ul>
+
+                <li>
+                    Photosynthesis
+                </li>
+
+                <li>
+                    Plant nutrition
+                </li>
+
+                <li>
+                    Transpiration
+                </li>
+
+                <li>
+                    Transport in plants
+                </li>
+
+                <li>
+                    Reproduction
+                </li>
+
+            </ul>
+
+            <a href="#plant-notes"
+               class="button">
+
+                View Notes
+
+            </a>
+
+        </div>
+
+
+        <!-- MICROBIOLOGY -->
+
+        <div class="topic-card">
+
+            <h3>
+                🔬 Microbiology
+            </h3>
+
+            <p>
+                Study microscopic organisms and
+                their importance in life.
+            </p>
+
+            <ul>
+
+                <li>
+                    Bacteria
+                </li>
+
+                <li>
+                    Viruses
+                </li>
+
+                <li>
+                    Fungi
+                </li>
+
+                <li>
+                    Protozoa
+                </li>
+
+                <li>
+                    Microorganisms
+                </li>
+
+            </ul>
+
+            <a href="#microbiology-notes"
+               class="button">
+
+                View Notes
+
+            </a>
+
+        </div>
+
 
     </div>
 
-    <footer>
-        <p>&copy; 2026 Source of Information. All Rights Reserved.</p>
-        <p>Education • Science • Technology • Innovation</p>
-    </footer>
+</section>
+
+
+<!-- CELL BIOLOGY NOTES -->
+
+<section class="notes"
+         id="cell-notes">
+
+    <div class="notes-box">
+
+        <h3>
+            Cell Biology — Introduction
+        </h3>
+
+        <p>
+
+            The cell is the basic structural and functional
+            unit of life. All living organisms are made up
+            of one or more cells.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Cells can be broadly classified into
+            prokaryotic cells and eukaryotic cells.
+            Plant and animal cells are examples of
+            eukaryotic cells.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Important cell structures include the nucleus,
+            cell membrane, cytoplasm, mitochondria,
+            ribosomes, and other specialized organelles.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- HUMAN BIOLOGY NOTES -->
+
+<section class="notes"
+         id="human-notes">
+
+    <div class="notes-box">
+
+        <h3>
+            Human Biology — Introduction
+        </h3>
+
+        <p>
+
+            Human biology focuses on the structure and
+            functions of the human body.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Major body systems include the digestive system,
+            respiratory system, circulatory system,
+            nervous system, reproductive system,
+            and excretory system.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ECOLOGY NOTES -->
+
+<section class="notes"
+         id="ecology-notes">
+
+    <div class="notes-box">
+
+        <h3>
+            Ecology — Introduction
+        </h3>
+
+        <p>
+
+            Ecology is the study of how living organisms
+            interact with one another and with their
+            physical environment.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            An ecosystem consists of living components,
+            known as biotic factors, and non-living
+            components, known as abiotic factors.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- GENETICS NOTES -->
+
+<section class="notes"
+         id="genetics-notes">
+
+    <div class="notes-box">
+
+        <h3>
+            Genetics — Introduction
+        </h3>
+
+        <p>
+
+            Genetics is the study of heredity and variation
+            in living organisms.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Genes are units of heredity found on chromosomes.
+            They carry information that influences inherited
+            characteristics.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PLANT BIOLOGY NOTES -->
+
+<section class="notes"
+         id="plant-notes">
+
+    <div class="notes-box">
+
+        <h3>
+            Plant Biology — Introduction
+        </h3>
+
+        <p>
+
+            Plants are organisms that can produce their own
+            food through photosynthesis.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Photosynthesis uses light energy to convert
+            carbon dioxide and water into glucose,
+            releasing oxygen as a by-product.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MICROBIOLOGY NOTES -->
+
+<section class="notes"
+         id="microbiology-notes">
+
+    <div class="notes-box">
+
+        <h3>
+            Microbiology — Introduction
+        </h3>
+
+        <p>
+
+            Microbiology is the study of microscopic organisms
+            such as bacteria, fungi, protozoa, and viruses.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Microorganisms can be beneficial or harmful.
+            They play important roles in medicine,
+            agriculture, food production, and ecosystems.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- REVISION -->
+
+<section class="revision">
+
+    <h2>
+        Biology Revision
+    </h2>
+
+    <p>
+
+        Practice Biology questions regularly to improve
+        your understanding and prepare for examinations.
+        More revision questions and answers will be added
+        to the SOI platform.
+
+    </p>
+
+    <a href="resources.html"
+       class="button">
+
+        Back to Resources
+
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        &copy; 2026 Source of Information.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Education • Science • Technology • Innovation
+    </p>
+
+    <p>
+        Empowering Learners Through Information
+    </p>
+
+</footer>
+
 
 </body>
+
 </html>
