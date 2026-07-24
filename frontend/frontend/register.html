@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SOI Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0b3d62;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background: #0b3d62;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #062b45;
+        }
+
+        #message {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #0b3d62;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Create Student Account</h1>
+
+    <p>Register with Source of Information</p>
+
+    <form id="registerForm">
+
+        <label for="fullName">Full Name</label>
+        <input
+            type="text"
+            id="fullName"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <label for="school">School</label>
+        <input
+            type="text"
+            id="school"
+            placeholder="Enter your school"
+            required
+        >
+
+        <label for="classLevel">Class / Level</label>
+        <input
+            type="text"
+            id="classLevel"
+            placeholder="e.g. S4, S5, S6"
+            required
+        >
+
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            placeholder="Create a password"
+            required
+        >
+
+        <button type="submit">
+            Create Account
+        </button>
+
+    </form>
+
+    <div id="message"></div>
+
+    <a class="back" href="../index.html">
+        ← Back to SOI Homepage
+    </a>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../supabase-config.js"></script>
+
+<script>
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+);
+
+const registerForm = document.getElementById("registerForm");
+const message = document.getElementById("message");
+
+registerForm.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const fullName = document.getElementById("fullName").value;
+    const school = document.getElementById("school").value;
+    const classLevel = document.getElementById("classLevel").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    message.textContent = "Creating account...";
+
+    const { data, error } = await supabaseClient.auth.signUp({
+        email: email,
+        password: password,
+        options: {
+            data: {
+                full_name: fullName,
+                school: school,
+                class_level: classLevel
+            }
+        }
+    });
+
+    if (error) {
+
+        message.textContent = "Registration failed: " + error.message;
+
+    } else {
+
+        message.textContent =
+            "Account created successfully! Please check your email to verify your account.";
+
+        registerForm.reset();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
